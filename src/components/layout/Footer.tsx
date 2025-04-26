@@ -98,7 +98,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex">
                 <MapPin className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
-                <span className="text-slate-300">123 GIS Center, Tech Park, Silicon Valley, CA 94024</span>
+                <span className="text-slate-300">Office no. 14, 2nd Floor, Shreehari Safalya Complex Phule Chauk, Aurangpura, Chh. Sambhajinagar</span>
               </li>
               <li className="flex">
                 <Phone className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
@@ -106,7 +106,7 @@ const Footer = () => {
               </li>
               <li className="flex">
                 <Mail className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
-                <span className="text-slate-300">info@geoexcel.com</span>
+                <span className="text-slate-300">bluewavesams@gmail.com</span>
               </li>
               <li className="flex">
                 <Clock className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
