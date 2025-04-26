@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/kishoresai8883/Bluewave",
+  "homepage": "https://kishoresai8883.github.io/Bluewave/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
