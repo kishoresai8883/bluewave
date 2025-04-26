@@ -8,24 +8,24 @@ const ClientsSection = () => {
     {
       id: 1,
       name: 'Sarah Johnson',
-      company: 'Urban Planning Associates',
-      content: 'GeoExcel delivered exceptional GIS mapping services for our urban development project. Their attention to detail and technical expertise were instrumental in our success.',
+      company: 'GIS Solutions Pvt Ltd',
+      content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       rating: 5,
       image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     },
     {
       id: 2,
       name: 'Michael Wei',
-      company: 'Enviro Systems Inc.',
-      content: 'We\'ve been working with GeoExcel for over 3 years for our technical staffing needs. They consistently provide qualified professionals who integrate seamlessly with our team.',
+      company: 'GIS Solutions Pvt Ltd',
+      content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       rating: 5,
       image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     },
     {
       id: 3,
       name: 'Jessica Martinez',
-      company: 'GlobalTech Solutions',
-      content: 'Their spatial analysis capabilities helped us identify optimal locations for our new facilities. GeoExcel\'s insights saved us both time and resources in our expansion.',
+      company: 'GIS Solutions Pvt Ltd',
+      content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       rating: 4,
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     }
@@ -51,7 +51,7 @@ const ClientsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Trusted by Industry Leaders</h2>
           <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-            Our clients rely on our expertise to transform their geospatial challenges into opportunities for growth and innovation.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptatibus consequatur earum quos saepe atque accusantium inventore corrupti, ipsa vitae cupiditate totam doloribus, nobis sequi architecto ullam quis tenetur blanditiis.
           </p>
         </div>
         
