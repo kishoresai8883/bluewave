@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-r from-slate-900 to-slate-800 text-white pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+    <section className="relative bg-gradient-to-r from-green-700 via-teal-700 to-blue-900 text-white pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
       {/* Abstract background shapes */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>
@@ -20,25 +20,18 @@ const Hero = () => {
             transition={{ duration: 0.7 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-            Leading <span className="text-blue-500">GIS</span> surveying & manpower services
+            Leading <span className="text-orange-400">GIS</span> surveying & manpower services
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl">
             We provide expert GIS consultation, surveying, and manpower services with a focus on quality and precision.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                to="/services" 
-                className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-md font-medium flex items-center justify-center transition-colors group"
-              >
-                Explore Our Services
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link 
                 to="/contact" 
-                className="bg-transparent border-2 border-white hover:bg-white hover:text-slate-900 text-white py-3 px-6 rounded-md font-medium flex items-center justify-center transition-all"
+                className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full font-medium flex items-center justify-center transition-colors group"
               >
-                <MapPin className="mr-2 w-4 h-4" />
-                Contact Us
+                Get in Touch
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </motion.div>
@@ -51,7 +44,7 @@ const Hero = () => {
           >
             <div className="relative overflow-hidden rounded-lg shadow-2xl">
               <img 
-                src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src="https://img.freepik.com/free-photo/business-concept-with-team-close-up_23-2149151159.jpg" 
                 alt="GIS Data Visualization" 
                 className="w-full object-cover"
               />
@@ -62,9 +55,9 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="absolute -bottom-12 -right-12 w-48 h-48 rounded-lg shadow-xl overflow-hidden border-4 border-white">
+            <div className="absolute -bottom-12 -right-12 w-56 h-48 rounded-lg shadow-xl overflow-hidden border-4 border-white">
               <img 
-                src="https://images.pexels.com/photos/7147842/pexels-photo-7147842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src="https://www.worldstarmanpower.ae/wp-content/uploads/2022/09/construction-manpower-dubai.jpg" 
                 alt="Professional Team" 
                 className="w-full h-full object-cover"
               />

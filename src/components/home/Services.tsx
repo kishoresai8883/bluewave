@@ -15,7 +15,7 @@ const ServicesSection = () => {
     {
       id: 2,
       icon: <Database className="w-10 h-10 text-blue-600" />,
-      title: 'Spatial Analysis',
+      title: 'Drone Surveying',
       description: 'Extract meaningful insights from geographical data with advanced analysis tools.',
       link: '/services'
     },
@@ -36,14 +36,14 @@ const ServicesSection = () => {
     {
       id: 5,
       icon: <LineChart className="w-10 h-10 text-blue-600" />,
-      title: 'Project Management',
+      title: 'DGPS Surveying',
       description: 'End-to-end management of complex GIS projects with timely delivery.',
       link: '/services'
     },
     {
       id: 6,
       icon: <BarChart3 className="w-10 h-10 text-blue-600" />,
-      title: 'Data Collection',
+      title: 'Geo Tagging',
       description: 'Comprehensive field data collection and validation services for accurate results.',
       link: '/services'
     }
@@ -96,13 +96,6 @@ const ServicesSection = () => {
               </div>
               <h3 className="text-xl font-bold text-slate-800 mb-3">{service.title}</h3>
               <p className="text-slate-600 mb-4">{service.description}</p>
-              <Link 
-                to={service.link} 
-                className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
-              >
-                Learn more
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
             </motion.div>
           ))}
         </motion.div>

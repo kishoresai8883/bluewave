@@ -62,7 +62,7 @@ const About = () => {
     {
       name: 'Sarah Johnson',
       title: 'GIS Technical Lead',
-      image: 'https://images.pexels.com/photos/3783958/pexels-photo-3783958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      image: 'https://images.pexels.com/photos/3727474/pexels-photo-3727474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     },
     {
       name: 'Michael Rodriguez',
@@ -84,20 +84,19 @@ const About = () => {
       transition={{ duration: 0.4 }}
     >
       {/* Hero Section */}
-      <section className="relative bg-slate-900 text-white pt-32 pb-20">
-        <div className="absolute inset-0 opacity-30">
+      <section className="relative bg-slate-400 text-white pt-32 pb-20 h-[476px]">
+        <div className="absolute inset-0 opacity-80">
           <img 
-            src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15866.jpg" 
             alt="About Us Background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-slate-900 opacity-80"></div>
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Bluewave</h1>
-            <p className="text-xl text-slate-300">
+            <p className="text-xl text-white">
             We are the Leading provider of GIS Consultation, Surveying Service
             Company, also provides Manpower services..
             </p>
@@ -128,7 +127,7 @@ const About = () => {
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.pexels.com/photos/313691/pexels-photo-313691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src="https://img.freepik.com/free-photo/about-as-service-contact-information-concept_53876-138509.jpg" 
                   alt="GeoExcel Journey" 
                   className="w-full h-96 object-cover"
                 />
@@ -185,11 +184,11 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-slate-900 text-white">
+      <section className="py-20 bg-slate-50 text-slate-900">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Our Leadership Team</h2>
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Meet the experts who drive our vision and lead our talented team.
             </p>
           </div>
@@ -205,7 +204,7 @@ const About = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                  <h3 className="text-xl font-bold mb-1 text-white">{member.name}</h3>
                   <p className="text-slate-400">{member.title}</p>
                 </div>
               </div>

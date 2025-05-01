@@ -5,7 +5,7 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+    <section className="py-20 bg-[url(https://img.freepik.com/free-vector/gradient-background-green-modern-designs_343694-2067.jpg)] bg-cover text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <motion.div

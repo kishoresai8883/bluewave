@@ -15,7 +15,7 @@ const AboutSection = () => {
 
   return (
     <section className="py-20">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -44,11 +44,6 @@ const AboutSection = () => {
                 className="w-full h-40 object-cover"
               />
             </div>
-            
-            <div className="absolute bg-blue-600 text-white rounded-lg p-4 -top-6 -left-6 hidden md:flex items-center shadow-lg">
-              <span className="text-2xl font-bold mr-2">10+</span>
-              <span className="text-sm">Years of Excellence</span>
-            </div>
           </motion.div>
           
           <motion.div
@@ -58,7 +53,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-              About <span className="text-blue-600">Bluewave</span>
+              About <span className="text-orange-400">Bluewave</span>
             </h2>
             <p className="text-lg text-slate-600 mb-6">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis magnam deleniti ratione laboriosam animi qui, tempore repudiandae nulla numquam mollitia cum sint voluptates, natus rem voluptas tenetur, dicta veritatis sed.

@@ -1,11 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+const [hoverTimeout, setHoverTimeout] = useState(null);
+
+const handleMouseEnter = () => {
+  if (hoverTimeout) clearTimeout(hoverTimeout);
+  setServicesOpen(true);
+};
+
+const handleMouseLeave = () => {
+  const timeout = setTimeout(() => {
+    setServicesOpen(false);
+  }, 200);
+  setHoverTimeout(timeout);
+};
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -27,7 +41,16 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+    {
+      name: 'Services',
+      path: '/services',
+      dropdown: [
+        { name: 'Geospacial & GIS Services', path: '/services/gis' },
+        { name: 'Manpower & Staffing Services', path: '/services/manpower' },
+        { name: 'Surveying & Mapping Services', path: '/services/surveying' },
+        { name: 'Property Tax Assessment Solutions', path: '/services/propertytax' },
+      ]
+    },
   //  { name: 'Clients', path: '/clients' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' },
@@ -36,14 +59,14 @@ const Navbar = () => {
   return (
     <header 
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'
+        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-white py-5'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center">
-            <Globe className={`w-8 h-8 ${scrolled ? 'text-blue-600' : 'text-white'} transition-colors mr-2`} />
-            <span className={`text-xl font-bold ${scrolled ? 'text-slate-800' : 'text-white'} transition-colors`}>
+            <Globe className={`w-8 h-8 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
+            <span className={`text-xl font-bold ${scrolled ? 'text-slate-800' : 'text-slate-800'} transition-colors`}>
               Bluewave
             </span>
           </NavLink>
@@ -51,27 +74,61 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-colors ${
-                    isActive 
-                      ? scrolled ? 'text-blue-600 border-b-2 border-blue-600' : 'text-white border-b-2 border-white'
-                      : scrolled ? 'text-slate-700 hover:text-blue-600' : 'text-white/90 hover:text-white'
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
+              <div key={link.name} className="relative group">
+                {link.dropdown ? (
+                  <div 
+                  className="relative group"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="flex items-center cursor-pointer">
+                    <span className={`text-lg font-medium transition-colors ${
+                      scrolled ? 'text-slate-700 hover:text-blue-600' : 'text-slate-700 hover:text-blue-600'
+                    }`}>
+                      Services
+                    </span>
+                    <ChevronDown className={`w-4 h-4 ml-1 ${
+                      scrolled ? 'text-slate-700' : 'text-slate-700'
+                    }`} />
+                  </div>
+                
+                  {servicesOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-slate-100 rounded-lg shadow-lg py-2 z-50">
+                      {link.dropdown.map((item) => (
+                        <NavLink
+                          key={item.name}
+                          to={item.path}
+                          className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600"
+                          onClick={() => setServicesOpen(false)}
+                        >
+                          {item.name}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                
+                ) : (
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `text-lg font-medium transition-colors ${
+                        isActive 
+                          ? scrolled ? 'text-blue-600 border-b-2 border-blue-600' : 'text-slate-700 border-b-2 border-white'
+                          : scrolled ? 'text-slate-700 hover:text-blue-600' : 'text-slate-700 hover:text-blue-600'
+                      }`
+                    }
+                  >
+                    {link.name}
+                  </NavLink>
+                )}
+              </div>
             ))}
           </nav>
 
           {/* Mobile menu button */}
           <button
-            className={`md:hidden focus:outline-none transition-colors ${
-              scrolled ? 'text-slate-800' : 'text-white'
-            }`}
+            className="md:hidden focus:outline-none transition-colors text-slate-800"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >

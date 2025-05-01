@@ -64,14 +64,14 @@ const Contact = () => {
       transition={{ duration: 0.4 }}
     >
       {/* Hero Section */}
-      <section className="relative bg-slate-900 text-white pt-32 pb-20">
-        <div className="absolute inset-0 opacity-30">
+      <section className="relative bg-slate-500 text-white pt-32 pb-20 h-[476px]">
+        <div className="absolute inset-0 opacity-80">
           <img 
-            src="https://images.pexels.com/photos/4386442/pexels-photo-4386442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            src="https://img.freepik.com/free-photo/businessman-using-laptop-mobile-phone_1421-526.jpg" 
             alt="Contact Background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-slate-900 opacity-80"></div>
+          <div className="absolute inset-0 bg-slate-800 opacity-80"></div>
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -89,7 +89,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
+            <div className='border rounded-lg shadow-lg p-8 text-black'>
               <h2 className="text-2xl font-bold text-slate-800 mb-6">Send Us a Message</h2>
               
               {formStatus.submitted && (
@@ -197,7 +197,7 @@ const Contact = () => {
             </div>
             
             {/* Contact Information */}
-            <div>
+            <div className='border rounded-lg shadow-lg p-8 text-black'>
               <h2 className="text-2xl font-bold text-slate-800 mb-6">Contact Information</h2>
               
               <div className="bg-slate-50 rounded-lg p-6 mb-8">
