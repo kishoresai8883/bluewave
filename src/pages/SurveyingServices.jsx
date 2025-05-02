@@ -72,14 +72,14 @@ const services = [
 
 const SurveyingServices = () => {
   return (
-    <motion.div
+    <>
+    <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="px-6 py-12 max-w-7xl mx-auto"
+      className="relative bg-slate-500 text-white pt-32 pb-20 h-[476px] w-full"
     >
-      <section className="relative bg-slate-400 text-white mb-24 pt-32 pb-20 h-[476px]">
         <div className="absolute inset-0 opacity-80">
           <img 
             src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15866.jpg" 
@@ -90,15 +90,15 @@ const SurveyingServices = () => {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Bluewave</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Surveying & Mapping Services</h1>
             <p className="text-xl text-white">
             We are the Leading provider of GIS Consultation, Surveying Service
             Company, also provides Manpower services..
             </p>
           </div>
         </div>
-      </section>
-      
+      </motion.section>
+      <motion.div className='px-6 py-12 mx-auto max-w-7xl'>
       <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">Surveying Services</h1>
       <div className="space-y-12">
         {services.map((service, index) => {
@@ -146,6 +146,7 @@ const SurveyingServices = () => {
         })}
       </div>
     </motion.div>
+    </>
   );
 };
 

@@ -147,20 +147,51 @@ const handleMouseLeave = () => {
           className="md:hidden bg-white shadow-lg absolute w-full top-full left-0"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col">
-            {navLinks.map((link) => (
+          {navLinks.map((link) => (
+  <div key={link.name} className="w-full">
+    {link.dropdown ? (
+      <>
+        <button
+          className="flex justify-between items-center w-full py-3 px-4 text-sm font-medium text-slate-700"
+          onClick={() => setServicesOpen(!servicesOpen)}
+        >
+          Services
+          <ChevronDown className={`w-4 h-4 transform transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+        </button>
+        {servicesOpen && (
+          <div className="pl-6">
+            {link.dropdown.map((item) => (
               <NavLink
-                key={link.name}
-                to={link.path}
-                className={({ isActive }) =>
-                  `py-3 px-4 text-sm font-medium ${
-                    isActive ? 'text-blue-600' : 'text-slate-700'
-                  }`
-                }
-                onClick={() => setIsOpen(false)}
+                key={item.name}
+                to={item.path}
+                className="block py-2 text-sm text-slate-600 hover:text-blue-600"
+                onClick={() => {
+                  setIsOpen(false);
+                  setServicesOpen(false);
+                }}
               >
-                {link.name}
+                {item.name}
               </NavLink>
             ))}
+          </div>
+        )}
+      </>
+    ) : (
+      <NavLink
+        to={link.path}
+        className={({ isActive }) =>
+          `block py-3 px-4 text-sm font-medium ${
+            isActive ? 'text-blue-600' : 'text-slate-700'
+          }`
+        }
+        onClick={() => setIsOpen(false)}
+      >
+        {link.name}
+      </NavLink>
+    )}
+  </div>
+))}
+
           </div>
         </motion.div>
       )}
