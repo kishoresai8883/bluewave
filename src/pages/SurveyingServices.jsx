@@ -82,7 +82,7 @@ const SurveyingServices = () => {
     >
         <div className="absolute inset-0 opacity-80">
           <img 
-            src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15866.jpg" 
+            src="https://img.freepik.com/free-photo/business-people-blue-background_53876-101889.jpg" 
             alt="About Us Background" 
             className="w-full h-full object-cover"
           />

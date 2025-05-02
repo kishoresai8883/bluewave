@@ -82,7 +82,7 @@ const PropertyTaxServices = () => {
     >
         <div className="absolute inset-0 opacity-80">
           <img 
-            src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15866.jpg" 
+            src="https://img.freepik.com/free-photo/partnership-handshake-innovation-corporate-business-concept_53876-104048.jpg" 
             alt="About Us Background" 
             className="w-full h-full object-cover"
           />
