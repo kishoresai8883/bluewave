@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import logo from '../../assets/bluewave-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +66,7 @@ const handleMouseLeave = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center">
-            <Globe className={`w-8 h-8 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
+          <img src={logo} alt="logo" className={`w-14 h-14 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
             <span className={`text-xl font-bold ${scrolled ? 'text-slate-800' : 'text-slate-800'} transition-colors`}>
               Bluewave
             </span>

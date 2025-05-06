@@ -5,12 +5,12 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const AboutSection = () => {
   const features = [
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit',
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit',
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit',
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit',
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit',
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit'
+    'Support Rural development',
+    'Tax assessment Surveys',
+    'Improve land records, land disputes',
+    'Empower rural Households',
+    'Manpower Services in various departments',
+    'DGPS, Topographical & Geotechnical Surveys'
   ];
 
   return (
@@ -56,12 +56,9 @@ const AboutSection = () => {
               About <span className="text-orange-400">Bluewave</span>
             </h2>
             <p className="text-lg text-slate-600 mb-6">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis magnam deleniti ratione laboriosam animi qui, tempore repudiandae nulla numquam mollitia cum sint voluptates, natus rem voluptas tenetur, dicta veritatis sed.
-            </p>
-            <p className="text-slate-600 mb-8">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia quos repellendus quia officiis iusto maxime deleniti possimus quasi, illum voluptatum voluptates? Eligendi quas vel doloribus facere maiores molestiae cumque error?
-            </p>
-            
+            We are a leading provider of GIS consultation, surveying services, and manpower solutions. Our in-house capabilities cover the full spectrum of GIS work, delivered by a dedicated team committed to achieving excellence and meeting project goals with precision.
+With extensive experience in the GIS domain, we excel in offering both skilled and unskilled manpower, as well as qualified professionals across various management levels. Our strength lies in understanding organizational needs and delivering candidates with the right skills and relevant experience.
+Our mission is to recruit responsible, capable individuals aligned with the specific requirements of each vacancy and organization we serve.</p> 
             <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-3">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start">

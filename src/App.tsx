@@ -14,7 +14,6 @@ import GisServices from './pages/GisServices';
 import ManpowerServices from './pages/ManpowerServices';
 import PropertyTaxServices from './pages/PropertyTaxServices';
 import SurveyingServices from './pages/SurveyingServices';
-//import Clients from './pages/Clients';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 

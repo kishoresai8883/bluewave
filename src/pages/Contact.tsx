@@ -239,7 +239,7 @@ const Contact = () => {
                   <a href="#" className="bg-slate-100 hover:bg-blue-100 text-blue-600 p-3 rounded-full transition-colors">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href="#" className="bg-slate-100 hover:bg-blue-100 text-blue-600 p-3 rounded-full transition-colors">
+                  <a href="https://www.instagram.com/bluewave.pvt.ltd" target='_blank' className="bg-slate-100 hover:bg-blue-100 text-blue-600 p-3 rounded-full transition-colors">
                     <Instagram className="w-5 h-5" />
                   </a>
                 </div>

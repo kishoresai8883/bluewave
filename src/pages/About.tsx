@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Award, Users, Globe, BarChart3, Building } from 'lucide-react';
+import img1 from '../assets/bluewave-team-img1.png';
+import img2 from '../assets/bluewave-team-img2.png';
+import img3 from '../assets/bluewave-team-img3.png';
+import img4 from '../assets/bluewave-team-img4.png';
 
 const About = () => {
   const stats = [
@@ -55,25 +59,23 @@ const About = () => {
 
   const team = [
     {
-      name: 'Dr. Robert Chen',
-      title: 'Founder & CEO',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      name: 'Dr. Sachin J. Gharde',
+      title: 'Director',
+      image: img1
     },
     {
-      name: 'Sarah Johnson',
-      title: 'GIS Technical Lead',
-      image: 'https://images.pexels.com/photos/3727474/pexels-photo-3727474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      name: 'Shruti H. Wasnik',
+      title: 'Director',
+      image: img3
     },
     {
-      name: 'Michael Rodriguez',
-      title: 'Head of Staffing Services',
-      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    },
+      name: 'Kavita Jalgaonkar',
+      title: 'Project Manager',
+      image: img2},
     {
-      name: 'Emily Wu',
-      title: 'Project Management Director',
-      image: 'https://images.pexels.com/photos/3727474/pexels-photo-3727474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    }
+      name: 'Sayyed Sofiya Anjum',
+      title: 'GIS Operation Manager',
+      image: img4}
   ];
 
   return (
@@ -85,12 +87,13 @@ const About = () => {
     >
       {/* Hero Section */}
       <section className="relative bg-slate-400 text-white pt-32 pb-20 h-[476px]">
-        <div className="absolute inset-0 opacity-80">
+        <div className="absolute inset-0 opacity-60">
           <img 
             src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15866.jpg" 
             alt="About Us Background" 
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-slate-800 opacity-80"></div>
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -111,19 +114,15 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-slate-800 mb-6">Our Story</h2>
               <p className="text-slate-600 mb-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum praesentium esse est tenetur magnam harum voluptatum, numquam ad fuga nemo similique ducimus quae ea, explicabo debitis quam quidem porro minus?
-              </p>
-              <p className="text-slate-600 mb-4">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti illo laboriosam, ipsam temporibus nisi explicabo dolore quos rerum quisquam fuga quaerat repellat libero, id consequatur quam quis maxime deserunt perferendis.
-              </p>
-              <p className="text-slate-600 mb-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum dolore, reprehenderit provident vero ea ex nobis rerum similique voluptate laboriosam ipsam! Dolor accusantium incidunt laborum maiores reiciendis saepe eveniet quis.
-              </p>
-              <p className="text-slate-600">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam doloribus ducimus rerum sequi et eligendi, alias est dicta. Fugiat vitae tempore mollitia maiores quo. Nihil est eum sunt architecto impedit.
+              Bluewave GIS & Manpower Solutions Pvt. Ltd. is a trusted leader in GIS consultation, GIS mapping, and surveying services. 
+              Our team of experienced professionals is equipped to handle the full spectrum of GIS work with efficiency and a commitment to achieving client goals.
+              Since 2015, we have been actively providing Manpower services across various departments, offering both skilled and unskilled professionals tailored to diverse organizational needs. 
+              We have proudly contributed to several high-impact projects, including: DGPS, Topographical, and Geotechnical Surveys
+              Active involvement in the SVAMITVA Project with the Land Records Department since 2021
+              Successfully conducting Property Tax Assessment Surveys for municipal councils
+              At Bluewave, our mission is to provide dependable professionals and cutting-edge GIS solutions that support the development goals of both government and private sector organizations.
               </p>
             </div>
-            
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
@@ -134,7 +133,7 @@ const About = () => {
               </div>
               
               <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-4 shadow-lg">
-                <p className="text-4xl font-bold text-blue-600">5+</p>
+                <p className="text-4xl font-bold text-blue-600">10+</p>
                 <p className="text-sm text-slate-600">Years of Excellence</p>
               </div>
             </div>
@@ -200,7 +199,7 @@ const About = () => {
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                    className="w-full h-full object-fill transition-transform hover:scale-105 duration-300"
                   />
                 </div>
                 <div className="p-6">

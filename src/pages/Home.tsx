@@ -4,7 +4,7 @@ import Hero from '../components/home/Hero';
 import ServicesSection from '../components/home/Services';
 import AboutSection from '../components/home/About';
 import CTA from '../components/home/CTA';
-
+import GalleryCom from '../components/home/GalleryComponent';
 const Home = () => {
   return (
     <motion.div
@@ -16,6 +16,7 @@ const Home = () => {
       <Hero />
       <ServicesSection />
       <AboutSection />
+      <GalleryCom />
       <CTA />
     </motion.div>
   );

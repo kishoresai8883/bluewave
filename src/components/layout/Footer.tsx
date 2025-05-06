@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/bluewave-logo.png';
 import { 
   MapPin, 
   Phone, 
@@ -20,7 +21,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <Globe className="w-7 h-7 text-blue-500 mr-2" />
+              <img src={logo} alt="logo" className="w-12 h-12 text-blue-500 mr-2" />
               <span className="text-xl font-bold">Bluewave</span>
             </div>
             <p className="text-slate-300 mb-4">
@@ -36,7 +37,7 @@ const Footer = () => {
               <a href="#" className="text-slate-300 hover:text-blue-500 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-slate-300 hover:text-blue-500 transition-colors">
+              <a href="https://www.instagram.com/bluewave.pvt.ltd" target='_blank' className="text-slate-300 hover:text-blue-500 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -54,9 +55,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/services" className="text-slate-300 hover:text-blue-500 transition-colors">Our Services</Link>
-              </li>
-              <li>
-                <Link to="/clients" className="text-slate-300 hover:text-blue-500 transition-colors">Clients</Link>
               </li>
               <li>
                 <Link to="/gallery" className="text-slate-300 hover:text-blue-500 transition-colors">Gallery</Link>
@@ -102,7 +100,7 @@ const Footer = () => {
               </li>
               <li className="flex">
                 <Phone className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
-                <span className="text-slate-300">+91 0123456789</span>
+                <span className="text-slate-300">+91 9029500358</span>
               </li>
               <li className="flex">
                 <Mail className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />

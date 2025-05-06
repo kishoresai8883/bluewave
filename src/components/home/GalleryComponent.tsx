@@ -101,29 +101,6 @@ const Gallery = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
     >
-      {/* Hero Section */}
-      <section className="relative bg-slate-700 text-white pt-32 pb-20 h-[476px]">
-        <div className="absolute inset-0 opacity-80">
-          <img 
-            src="https://images.pexels.com/photos/577586/pexels-photo-577586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-            alt="Gallery Background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-slate-600 opacity-80"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Project Gallery</h1>
-            <p className="text-xl text-slate-300">
-              Explore our portfolio of GIS projects and technical solutions across various industries.
-            </p>
-          </div>
-        </div>
-      </section>
-
-
-
       {/* Gallery */}
       <section className="py-16">
         <div className="container mx-auto px-4 md:px-6">
@@ -152,13 +129,6 @@ const Gallery = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  {/* <div className="p-4">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold text-slate-800">Photo Gallery</h3>
-                    </div>
-                    <p className="text-slate-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div> */}
-                  
                 </motion.div>
               ))}
             </motion.div>

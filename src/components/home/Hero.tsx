@@ -51,7 +51,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-6">
                 <h3 className="text-xl font-bold text-white mb-1">Geographic Excellence</h3>
-                <p className="text-sm text-slate-300">Precision mapping and spatial analysis</p>
+                <p className="text-sm text-slate-300">Empowering Progress Through GIS & People</p>
               </div>
             </div>
             
