@@ -2,10 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageSquare } from 'lucide-react';
+import bgimg from '../../assets/BG-8.jpg';
 
 const CTA = () => {
   return (
-    <section className="py-20 bg-[url(https://img.freepik.com/free-vector/gradient-background-green-modern-designs_343694-2067.jpg)] bg-cover text-white">
+    <section className="py-20 bg-cover text-white" style={{ backgroundImage: `url(${bgimg})` }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <motion.div
@@ -15,10 +16,10 @@ const CTA = () => {
             viewport={{ once: true }}
             className="lg:col-span-3"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-            Leading GIS surveying & manpower services
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-black">
+              Leading GIS Surveying & Manpower Services
             </h2>
-            <p className="text-lg text-blue-100 mb-8 max-w-2xl">
+            <p className="text-lg text-black mb-8 max-w-2xl">
               Our team of GIS specialists and technical experts are ready to help you unlock the potential of your spatial data and provide the skilled workforce you need.
             </p>
             

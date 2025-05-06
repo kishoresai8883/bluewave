@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, X } from 'lucide-react';
+import img1 from '../../assets/gallery-img1.png'
+import img2 from '../../assets/gallery-img2.png'
+import img3 from '../../assets/gallery-img3.jpg'
+import img4 from '../../assets/gallery-img4.png'  
+import img5 from '../../assets/gallery-img5.jpg'
+import img6 from '../../assets/gallery-img6.png'
 
 const Gallery = () => {
   const [filter, setFilter] = useState('all');
@@ -16,42 +22,42 @@ const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
-      src: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      src: img1,
       title: 'Urban Mapping Project',
       category: 'mapping',
       description: 'Comprehensive urban mapping solution for city planning and development.'
     },
     {
       id: 2,
-      src: 'https://images.pexels.com/photos/313691/pexels-photo-313691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      src: img2,
       title: 'Geospatial Data Analysis',
       category: 'analysis',
       description: 'Advanced spatial analysis for identifying development patterns and trends.'
     },
     {
       id: 3,
-      src: 'https://images.pexels.com/photos/242492/pexels-photo-242492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      src: img3,
       title: 'Remote Sensing Application',
       category: 'remote-sensing',
       description: 'Satellite imagery analysis for environmental monitoring and assessment.'
     },
     {
       id: 4,
-      src: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      src: img4,
       title: 'Technical Team Collaboration',
       category: 'team',
       description: 'Our expert team working together on complex GIS solutions.'
     },
     {
       id: 5,
-      src: 'https://images.pexels.com/photos/313691/pexels-photo-313691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      src: img5,
       title: 'Data Visualization Dashboard',
       category: 'analysis',
       description: 'Interactive dashboard for visualizing complex geospatial data.'
     },
     {
       id: 6,
-      src: 'https://images.pexels.com/photos/7412111/pexels-photo-7412111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      src: img6,
       title: 'Field Data Collection',
       category: 'field-work',
       description: 'On-site data collection for accurate geographic information.'
@@ -95,6 +101,14 @@ const Gallery = () => {
   };
 
   return (
+    <>
+    <section className='py-20 bg-slate-50'>
+    <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Gallery</h2>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          Explore our journey through visuals showcasing Bluewave's GIS projects, fieldwork, and impactful manpower solutions.
+          </p>
+        </div>
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -136,6 +150,8 @@ const Gallery = () => {
         </div>
       </section>
     </motion.div>
+    </section>
+    </>
   );
 };
 

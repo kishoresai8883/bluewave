@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import img from '../../assets/bw-img1.jpg'
 
 const Hero = () => {
   return (
@@ -31,7 +32,7 @@ const Hero = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full font-medium flex items-center justify-center transition-colors group"
               >
                 Get in Touch
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-6 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </motion.div>
@@ -44,7 +45,7 @@ const Hero = () => {
           >
             <div className="relative overflow-hidden rounded-lg shadow-2xl">
               <img 
-                src="https://img.freepik.com/free-photo/business-concept-with-team-close-up_23-2149151159.jpg" 
+                src={img} 
                 alt="GIS Data Visualization" 
                 className="w-full object-cover"
               />

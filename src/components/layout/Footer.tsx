@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/bluewave-logo.png';
 import { 
   MapPin, 
@@ -20,10 +20,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center mb-4">
-              <img src={logo} alt="logo" className="w-12 h-12 text-blue-500 mr-2" />
+            <NavLink to="/" className="flex items-center mb-4">
+              <img src={logo} alt="logo"  className="w-12 h-12 text-blue-500 mr-2" />
               <span className="text-xl font-bold">Bluewave</span>
-            </div>
+            </NavLink>
             <p className="text-slate-300 mb-4">
               Leading provider of innovative GIS solutions and expert manpower services, delivering excellence since 2015.
             </p>
@@ -70,22 +70,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 border-b border-slate-700 pb-2">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-slate-300 hover:text-blue-500 transition-colors">GIS Mapping</Link>
+                <Link to="/services/gis" className="text-slate-300 hover:text-blue-500 transition-colors">GIS Mapping</Link>
               </li>
               <li>
-                <Link to="/services" className="text-slate-300 hover:text-blue-500 transition-colors">Spatial Analysis</Link>
+                <Link to="/services/manpower" className="text-slate-300 hover:text-blue-500 transition-colors">Manpower & Staffing</Link>
               </li>
               <li>
-                <Link to="/services" className="text-slate-300 hover:text-blue-500 transition-colors">Remote Sensing</Link>
+                <Link to="/services/surveying" className="text-slate-300 hover:text-blue-500 transition-colors">Surveying & Mapping</Link>
               </li>
               <li>
-                <Link to="/services" className="text-slate-300 hover:text-blue-500 transition-colors">Technical Staffing</Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-slate-300 hover:text-blue-500 transition-colors">Project Management</Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-slate-300 hover:text-blue-500 transition-colors">Data Collection</Link>
+                <Link to="/services/propertytax" className="text-slate-300 hover:text-blue-500 transition-colors">Property Tax Assessment</Link>
               </li>
             </ul>
           </div>
@@ -105,10 +99,6 @@ const Footer = () => {
               <li className="flex">
                 <Mail className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
                 <span className="text-slate-300">bluewavesams@gmail.com</span>
-              </li>
-              <li className="flex">
-                <Clock className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
-                <span className="text-slate-300">Mon-Fri: 9AM - 6PM</span>
               </li>
             </ul>
           </div>
