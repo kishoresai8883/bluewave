@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import img from '../../assets/bw-img2.webp'
 
 const AboutSection = () => {
   const features = [
@@ -15,7 +16,7 @@ const AboutSection = () => {
 
   return (
     <section className="py-20">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -26,7 +27,7 @@ const AboutSection = () => {
           >
             <div className="relative rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src={img}
                 alt="Our Team" 
                 className="w-full h-96 object-cover"
               />

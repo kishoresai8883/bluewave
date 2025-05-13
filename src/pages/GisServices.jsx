@@ -7,67 +7,57 @@ const services = [
     id: 1,
     icon: <Map className="w-10 h-10 text-blue-600" />,
     title: 'GIS Mapping',
-    description: 'Our custom GIS mapping services create detailed, interactive maps that visualize complex spatial data in intuitive ways.',
+    description: 'Our Core GIS Services focus on the collection, analysis, and visualization of spatial data using advanced geospatial technologies. We specialize in GIS consultation, digital mapping, cadastral and legacy data integration, as well as high-precision feature extraction to support urban planning, land management, and government initiatives like SVAMITVA and Smart City projects.',
     features: [
-      'Custom map creation and design',
-      'Interactive web maps and applications',
-      'Thematic mapping and visualization',
-      'High-resolution map production'
+      'GIS Consultation',
+      'GIS-based Mapping',
+      'Cadastral Mapping',
+      'Data Digitization & Integration',
+      'GIS Visualization (SVAMITVA, Smart City Projects)',
     ],
     image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg'
   },
   {
     id: 2,
     icon: <Database className="w-10 h-10 text-blue-600" />,
-    title: 'Spatial Analysis',
-    description: 'Transform raw geospatial data into actionable intelligence with our comprehensive spatial analysis services.',
+    title: 'Spatial Data Collection & Integration',
+    description: 'Accurate data is the foundation of GIS. We specialize in collecting, digitizing, and integrating geospatial data from diverse sources including field surveys, drone imagery, and legacy records.',
     features: [
-      'Proximity and buffer analysis',
-      'Spatial statistics and pattern detection',
-      'Network and routing analysis',
-      'Site suitability modeling'
+      'Ground truthing and field data capture',
+      'Legacy map digitization and integration',
+      'Geo-referencing and transformation of spatial datasets',
+      'Ground Control Point (GCP) collection using DGPS',
+      'Data layering from multiple government and private sources'
     ],
     image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
   },
   {
     id: 3,
     icon: <Satellite className="w-10 h-10 text-blue-600" />,
-    title: 'Remote Sensing',
-    description: 'Access critical insights from satellite and aerial imagery with our advanced remote sensing capabilities.',
+    title: 'GIS Application Development & Analysis',
+    description: 'Our team develops custom GIS tools and platforms for spatial data management, analysis, and visualization, enabling clients to extract insights and automate workflows.',
     features: [
-      'Satellite imagery acquisition and analysis',
-      'Land use and land cover classification',
-      'Change detection and monitoring',
-      'Environmental assessment'
+      'GIS-based mobile and web application development',
+      'Spatial analysis and modeling (e.g., terrain, risk, accessibility)',
+      'Integration with external systems (e.g., MIS, ERP, tax systems)',
+      'Custom dashboards and reporting tools',
+      'Real-time data analytics and location intelligence'
     ],
     image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
   },
   {
     id: 4,
     icon: <Layers className="w-10 h-10 text-blue-600" />,
-    title: 'Data Integration',
-    description: 'Seamlessly combine multiple data sources into a coherent geospatial framework for comprehensive analysis.',
+    title: 'Surveying & Land Records Management',
+    description: 'We provide end-to-end land surveying and records management services for urban and rural areas. These services support property ownership clarity, boundary demarcation, and legal documentation.',
     features: [
-      'Multi-source data integration',
-      'Spatial database development',
-      'ETL processes for geospatial data',
-      'Legacy system integration'
+      'DGPS and drone-based land surveys',
+      'Boundary fixation and cadastral verification',
+      'SVAMITVA scheme implementation',
+      'Property card (Sanad) generation and distribution'
     ],
     image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
   },
-  {
-    id: 5,
-    icon: <Cloud className="w-10 h-10 text-blue-600" />,
-    title: 'GIS Cloud Solutions',
-    description: 'Deploy and manage scalable cloud-based GIS infrastructure for efficient data handling and application hosting.',
-    features: [
-      'Cloud GIS architecture design',
-      'SaaS GIS implementation',
-      'Performance optimization',
-      'Secure data storage and access'
-    ],
-    image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
-  }
 ];
 
 const GISServices = () => {
@@ -91,16 +81,16 @@ const GISServices = () => {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Geospacial & GIS Services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Geospatial & GIS Services</h1>
             <p className="text-xl text-slate-300">
-              Reach out to discuss how our GIS and manpower solutions can meet your needs.
+            Our Geospatial and GIS Services offer end-to-end solutions for capturing, analyzing, and visualizing spatial data, Using advanced GIS technologies.
             </p>
           </div>
         </div>
     </motion.section>
       
     <motion.div className="max-w-7xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">GIS Services</h1>
+      <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">Our Services</h1>
       <div className="space-y-12">
         {services.map((service, index) => {
           const isEven = index % 2 === 0;

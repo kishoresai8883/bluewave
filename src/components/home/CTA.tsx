@@ -16,10 +16,10 @@ const CTA = () => {
             viewport={{ once: true }}
             className="lg:col-span-3"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-black">
-              Leading GIS Surveying & Manpower Services
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-white">
+              Mapping Precision. Powering Progress.
             </h2>
-            <p className="text-lg text-black mb-8 max-w-2xl">
+            <p className="text-lg text-white mb-8 max-w-2xl">
               Our team of GIS specialists and technical experts are ready to help you unlock the potential of your spatial data and provide the skilled workforce you need.
             </p>
             

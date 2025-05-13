@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import emailjs from '@emailjs/browser';
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { 
   Send, 
   Phone, 
   Mail, 
   MapPin, 
-  Clock, 
   Facebook, 
   Twitter, 
   Linkedin, 
@@ -35,26 +35,32 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send the form data to your backend
-    // For this example, we'll just simulate a successful submission
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: 'Thank you for your message! We will get back to you soon.'
-    });
     
-    // Reset form after successful submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
+    emailjs.send('service_21ro79j', 'template_683h32m', formData, 'px21Jc89tv3ZmMr6Y')
+
+    .then(() => {
+      setFormStatus({
+        submitted: true,
+        success: true,
+        message: 'Thank you for your message! We will get back to you soon.'
+      });
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    })
+    .catch((error) => {
+      console.error('EmailJS error:', error);
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: 'There was an error sending your message. Please try again later.'
+      });
     });
   };
-
-  // Map coordinates for San Francisco
-  const position: [number, number] = [37.7749, -122.4194];
 
   return (
     <motion.div
@@ -162,8 +168,8 @@ const Contact = () => {
                       <option value="">Select a subject</option>
                       <option value="GIS Services">GIS Services</option>
                       <option value="Manpower Services">Manpower Services</option>
-                      <option value="Partnership">Partnership</option>
-                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Partnership">Surveying</option>
+                      <option value="General Inquiry">Property Tax</option>
                     </select>
                   </div>
                 </div>

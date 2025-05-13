@@ -6,68 +6,58 @@ const services = [
   {
     id: 1,
     icon: <Map className="w-10 h-10 text-blue-600" />,
-    title: 'GIS Mapping',
-    description: 'Our custom GIS mapping services create detailed, interactive maps that visualize complex spatial data in intuitive ways.',
+    title: 'Skilled Manpower Supply',
+    description: 'We offer technically qualified and experienced professionals across various domains, including GIS, engineering, IT, and surveying. Our skilled manpower ensures efficiency, accuracy, and reliability for both field and office-based projects.',
     features: [
-      'Custom map creation and design',
-      'Interactive web maps and applications',
-      'Thematic mapping and visualization',
-      'High-resolution map production'
+      'Engineers (GIS, Civil, Surveying, etc.)',
+      'CAD/GIS Technicians and Operators',
+      'Technical Field Staff',
+      'Industry-specific skilled roles'
     ],
     image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg'
   },
   {
     id: 2,
     icon: <Database className="w-10 h-10 text-blue-600" />,
-    title: 'Spatial Analysis',
-    description: 'Transform raw geospatial data into actionable intelligence with our comprehensive spatial analysis services.',
+    title: 'Unskilled & General Labor Supply',
+    description: 'We provide dependable unskilled and general labor for support tasks across fieldwork, construction, and municipal projects. Our workforce is adaptable, task-ready, and available for both short-term and long-term assignments.',
     features: [
-      'Proximity and buffer analysis',
-      'Spatial statistics and pattern detection',
-      'Network and routing analysis',
-      'Site suitability modeling'
+      'Field assistants and helpers',
+      'Ground survey support staff',
+      'Utility and maintenance workers',
+      'Flexible workforce for short-term or long-term projects',
+      'Quick onboarding and deployment'
     ],
     image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
   },
   {
     id: 3,
     icon: <Satellite className="w-10 h-10 text-blue-600" />,
-    title: 'Remote Sensing',
-    description: 'Access critical insights from satellite and aerial imagery with our advanced remote sensing capabilities.',
+    title: 'Government & Institutional Staffing',
+    description: 'We offer staffing solutions for government departments and public institutions, providing trained personnel such as stenographers, data entry operators, and administrative staff. Our services ensure compliance with regulatory standards and seamless integration into public sector workflows.',
     features: [
-      'Satellite imagery acquisition and analysis',
-      'Land use and land cover classification',
-      'Change detection and monitoring',
-      'Environmental assessment'
+      'Document verification and data entry operators',
+      'ULB (Urban Local Body) support personnel',
+      'Compliance with labor laws and government regulations',
+      'Experience with schemes like SVAMITVA and municipal projects',
+      'Stenographers and clerical staff for tribunals and administrative offices'
     ],
     image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
   },
   {
     id: 4,
     icon: <Layers className="w-10 h-10 text-blue-600" />,
-    title: 'Data Integration',
-    description: 'Seamlessly combine multiple data sources into a coherent geospatial framework for comprehensive analysis.',
+    title: 'Project-Based Staffing Solutions',
+    description: 'We provide flexible, project-specific staffing solutions tailored to the scope, duration, and skill requirements of each assignment. Whether for GIS, surveying, or administrative projects, our workforce is deployed efficiently to meet deadlines and ensure smooth project execution.',
     features: [
-      'Multi-source data integration',
-      'Spatial database development',
-      'ETL processes for geospatial data',
-      'Legacy system integration'
+      'Custom team composition based on project requirements',
+      'On-site coordination and supervision',
+      'Flexible staffing durations (short/long term)',
+      'Performance tracking and reporting',
+      'GIS, survey, and IT project support'
     ],
     image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
   },
-  {
-    id: 5,
-    icon: <Cloud className="w-10 h-10 text-blue-600" />,
-    title: 'GIS Cloud Solutions',
-    description: 'Deploy and manage scalable cloud-based GIS infrastructure for efficient data handling and application hosting.',
-    features: [
-      'Cloud GIS architecture design',
-      'SaaS GIS implementation',
-      'Performance optimization',
-      'Secure data storage and access'
-    ],
-    image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
-  }
 ];
 
 const ManpowerServices = () => {
@@ -92,15 +82,14 @@ const ManpowerServices = () => {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Manpower & Staffing Services</h1>
             <p className="text-xl text-white">
-            We are the Leading provider of GIS Consultation, Surveying Service
-            Company, also provides Manpower services..
+            We provide skilled, unskilled, and professional manpower tailored to your project needs, ensuring timely deployment and quality support for both government and private sector operations.
             </p>
           </div>
         </div>
       </motion.section>
       
       <motion.div className='px-6 py-12 mx-auto max-w-7xl'>
-      <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">Manpower Services</h1>
+      <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">Our Services</h1>
       <div className="space-y-12">
         {services.map((service, index) => {
           const isEven = index % 2 === 0;

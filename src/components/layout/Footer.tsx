@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/bluewave-logo.png';
+import '../../index.css';
 import { 
   MapPin, 
   Phone, 
   Mail, 
-  Globe, 
   Facebook, 
   Twitter, 
   Linkedin, 
   Instagram,
-  Clock 
 } from 'lucide-react';
 
 const Footer = () => {
@@ -22,7 +21,7 @@ const Footer = () => {
           <div>
             <NavLink to="/" className="flex items-center mb-4">
               <img src={logo} alt="logo"  className="w-12 h-12 text-blue-500 mr-2" />
-              <span className="text-xl font-bold">Bluewave</span>
+              <span className="text-xl font-bold logo-name">BLUEWAVE</span>
             </NavLink>
             <p className="text-slate-300 mb-4">
               Leading provider of innovative GIS solutions and expert manpower services, delivering excellence since 2015.

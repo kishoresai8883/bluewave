@@ -363,3 +363,12 @@ const Services = () => {
 };
 
 export default Services;
+
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 14px; color: #333; padding: 14px 8px; background-color: #f5f5f5;">
+<div style="max-width: 600px; margin: auto; background-color: #fff;">
+<div style="border-top: 6px solid #458500; padding: 16px;"><span style="color: #000000;"><a style="text-decoration: none; outline: none; margin-right: 8px; vertical-align: middle; color: #000000;" href="[Website Link]" target="_blank" rel="noopener">From : {{from_name}}<br><br>Email : {{from_email}}<br><br>{{message}}<br><br>Best wishes,<br>Bluewavegis</a></span></div>
+</div>
+<div style="max-width: 600px; margin: auto;">
+<p style="color: #999;">&nbsp;</p>
+</div>
+</div>

@@ -6,68 +6,57 @@ const services = [
   {
     id: 1,
     icon: <Map className="w-10 h-10 text-blue-600" />,
-    title: 'GIS Mapping',
-    description: 'Our custom GIS mapping services create detailed, interactive maps that visualize complex spatial data in intuitive ways.',
+    title: 'Topographical & Geotechnical Surveys',
+    description: 'We conduct topographical and geotechnical surveys to map land features and analyze soil conditions, supporting safe and effective planning for construction, infrastructure, and development projects.',
     features: [
-      'Custom map creation and design',
-      'Interactive web maps and applications',
-      'Thematic mapping and visualization',
-      'High-resolution map production'
+      'Contour and elevation mapping',
+      'Soil testing and borehole logging',
+      'Infrastructure suitability analysis',
+      'Slope, drainage, and terrain features',
+      'Essential for civil engineering and development planning'
     ],
     image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg'
   },
   {
     id: 2,
     icon: <Database className="w-10 h-10 text-blue-600" />,
-    title: 'Spatial Analysis',
-    description: 'Transform raw geospatial data into actionable intelligence with our comprehensive spatial analysis services.',
+    title: 'Drone Surveying',
+    description: 'We offer drone surveying services to capture high-resolution aerial data for accurate mapping, terrain modeling, and large-area assessments, enabling faster and more efficient project planning.',
     features: [
-      'Proximity and buffer analysis',
-      'Spatial statistics and pattern detection',
-      'Network and routing analysis',
-      'Site suitability modeling'
+      'Aerial data capture using UAVs',
+      'Ortho-rectified imagery',
+      'Cost-effective for large-scale areas',
+      'Ideal for urban planning, agriculture, and infrastructure projects'
     ],
     image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
   },
   {
     id: 3,
     icon: <Satellite className="w-10 h-10 text-blue-600" />,
-    title: 'Remote Sensing',
-    description: 'Access critical insights from satellite and aerial imagery with our advanced remote sensing capabilities.',
+    title: 'DGPS & Total Station Surveying',
+    description: 'We use Differential GPS and Total Station tools to deliver precise ground-level spatial data for land development, layout planning, and engineering projects.',
     features: [
-      'Satellite imagery acquisition and analysis',
-      'Land use and land cover classification',
-      'Change detection and monitoring',
-      'Environmental assessment'
+      'High-accuracy ground positioning',
+      'Real-time kinematic (RTK) corrections',
+      'Boundary and parcel measurements',
+      'Infrastructure layout and road alignment',
+      'Ideal for cadastral and construction surveys'
     ],
     image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
   },
   {
     id: 4,
     icon: <Layers className="w-10 h-10 text-blue-600" />,
-    title: 'Data Integration',
-    description: 'Seamlessly combine multiple data sources into a coherent geospatial framework for comprehensive analysis.',
+    title: 'GIS-Based Mapping & Integration',
+    description: 'We develop detailed GIS maps with layered data to support spatial analysis, planning, and decision-making across urban, rural, and industrial applications.',
     features: [
-      'Multi-source data integration',
-      'Spatial database development',
-      'ETL processes for geospatial data',
-      'Legacy system integration'
+      'Layered thematic mapping (land use, utilities, etc.)',
+      'Integration of drone, survey, and legacy data',
+      'Web GIS and dashboard-ready outputs',
+      'Supports real-time monitoring and updates'
     ],
     image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
   },
-  {
-    id: 5,
-    icon: <Cloud className="w-10 h-10 text-blue-600" />,
-    title: 'GIS Cloud Solutions',
-    description: 'Deploy and manage scalable cloud-based GIS infrastructure for efficient data handling and application hosting.',
-    features: [
-      'Cloud GIS architecture design',
-      'SaaS GIS implementation',
-      'Performance optimization',
-      'Secure data storage and access'
-    ],
-    image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
-  }
 ];
 
 const SurveyingServices = () => {
@@ -92,14 +81,13 @@ const SurveyingServices = () => {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Surveying & Mapping Services</h1>
             <p className="text-xl text-white">
-            We are the Leading provider of GIS Consultation, Surveying Service
-            Company, also provides Manpower services..
+              We deliver accurate surveying and mapping services using DGPS, drones, and GIS tools to support land assessment, boundary marking, and infrastructure planning.
             </p>
           </div>
         </div>
       </motion.section>
       <motion.div className='px-6 py-12 mx-auto max-w-7xl'>
-      <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">Surveying Services</h1>
+      <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">Our Services</h1>
       <div className="space-y-12">
         {services.map((service, index) => {
           const isEven = index % 2 === 0;

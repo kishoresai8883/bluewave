@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import logo from '../../assets/bluewave-logo.png';
+import '../../index.css'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,7 @@ const handleMouseLeave = () => {
       name: 'Services',
       path: '/services',
       dropdown: [
-        { name: 'Geospacial & GIS Services', path: '/services/gis' },
+        { name: 'Geospatial & GIS Services', path: '/services/gis' },
         { name: 'Manpower & Staffing Services', path: '/services/manpower' },
         { name: 'Surveying & Mapping Services', path: '/services/surveying' },
         { name: 'Property Tax Assessment Solutions', path: '/services/propertytax' },
@@ -67,8 +68,8 @@ const handleMouseLeave = () => {
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center">
           <img src={logo} alt="logo" className={`w-14 h-14 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
-            <span className={`text-xl font-bold ${scrolled ? 'text-slate-800' : 'text-slate-800'} transition-colors`}>
-              Bluewave
+            <span className={`text-xl logo-name ${scrolled ? 'text-slate-900' : 'text-slate-900'} transition-colors`}>
+              BLUEWAVE
             </span>
           </NavLink>
 

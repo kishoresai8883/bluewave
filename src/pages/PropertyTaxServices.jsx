@@ -6,68 +6,57 @@ const services = [
   {
     id: 1,
     icon: <Map className="w-10 h-10 text-blue-600" />,
-    title: 'GIS Mapping',
-    description: 'Our custom GIS mapping services create detailed, interactive maps that visualize complex spatial data in intuitive ways.',
+    title: 'Door-to-Door Property Survey',
+    description: 'We conduct door-to-door property surveys to collect accurate data on ownership, property usage, structure, and utilities. This ensures reliable information for tax assessment, urban planning, and municipal record updates.',
     features: [
-      'Custom map creation and design',
-      'Interactive web maps and applications',
-      'Thematic mapping and visualization',
-      'High-resolution map production'
+      'Owner and occupant information capture',
+      'Floor-wise carpet and built-up area measurement',
+      'Water, drainage, and utility data collection',
+      'Photographic documentation of property',
+      'Mobile survey application integration'
     ],
     image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg'
   },
   {
     id: 2,
     icon: <Database className="w-10 h-10 text-blue-600" />,
-    title: 'Spatial Analysis',
-    description: 'Transform raw geospatial data into actionable intelligence with our comprehensive spatial analysis services.',
+    title: 'Online Tax Assessment System',
+    description: 'Our Online Tax Assessment System streamlines property tax calculation, billing, and management through a centralized digital platform, enabling real-time assessments, self-service options, and improved transparency for both citizens and municipalities.',
     features: [
-      'Proximity and buffer analysis',
-      'Spatial statistics and pattern detection',
-      'Network and routing analysis',
-      'Site suitability modeling'
+      'Real-time tax assessment and billing',
+      'Carpet-area-based tax calculation engine',
+      'Owner login for self-assessment and updates',
+      'API support for third-party software and portals'
     ],
     image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
   },
   {
     id: 3,
     icon: <Satellite className="w-10 h-10 text-blue-600" />,
-    title: 'Remote Sensing',
-    description: 'Access critical insights from satellite and aerial imagery with our advanced remote sensing capabilities.',
+    title: 'Grievance Redressal & Public Notification',
+    description: 'A transparent process to handle objections, hearings, and public notices during the tax assessment lifecycle.',
     features: [
-      'Satellite imagery acquisition and analysis',
-      'Land use and land cover classification',
-      'Change detection and monitoring',
-      'Environmental assessment'
+      'Public display of draft assessment list',
+      'Hearing schedule management and case recording',
+      'ULB review panel and correction workflows',
+      'Final demand register creation and publishing'
     ],
     image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
   },
   {
     id: 4,
     icon: <Layers className="w-10 h-10 text-blue-600" />,
-    title: 'Data Integration',
-    description: 'Seamlessly combine multiple data sources into a coherent geospatial framework for comprehensive analysis.',
+    title: 'Post-Assessment Monitoring & Maintenance',
+    description: 'Continuous updating and maintenance of property records to reflect structural changes, ownership transfer, and new constructions.',
     features: [
-      'Multi-source data integration',
-      'Spatial database development',
-      'ETL processes for geospatial data',
-      'Legacy system integration'
+      'Annual property tax database update',
+      'Property number renumbering and sequence mapping',
+      'Tax collection tracking through Android applications',
+      'Ongoing field verification',
+      'Mapping of new buildings and modifications'
     ],
     image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
   },
-  {
-    id: 5,
-    icon: <Cloud className="w-10 h-10 text-blue-600" />,
-    title: 'GIS Cloud Solutions',
-    description: 'Deploy and manage scalable cloud-based GIS infrastructure for efficient data handling and application hosting.',
-    features: [
-      'Cloud GIS architecture design',
-      'SaaS GIS implementation',
-      'Performance optimization',
-      'Secure data storage and access'
-    ],
-    image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
-  }
 ];
 
 const PropertyTaxServices = () => {
@@ -99,7 +88,7 @@ const PropertyTaxServices = () => {
         </div>
     </motion.section>
       <motion.div className="px-6 py-12 mx-auto max-w-7xl">
-      <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">Property Tax Services</h1>
+      <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">Our Services</h1>
       <div className="space-y-12">
         {services.map((service, index) => {
           const isEven = index % 2 === 0;
