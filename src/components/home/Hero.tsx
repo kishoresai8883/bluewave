@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import img from '../../assets/bw-img1.jpg'
 
@@ -21,7 +21,7 @@ const Hero = () => {
             transition={{ duration: 0.7 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-            Leading <span className="text-orange-400">GIS</span> surveying & manpower services
+            <span className='text-orange-400'>Bluewave</span> is a Leading GIS Surveying & Manpower services
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl">
             We provide expert GIS consultation, surveying, and manpower services with a focus on quality and precision.
