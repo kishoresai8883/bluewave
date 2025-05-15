@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
+import img from '../assets/gis.jpg';
 import img1 from './../assets/img1.jpeg';
 import img2 from './../assets/img2.jpg';
 import img3 from './../assets/img3.jpg';
@@ -72,11 +73,11 @@ const GISServices = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="relative bg-slate-500 text-white pt-32 pb-20 h-[476px] w-full"
+      className="relative bg-slate-500 text-white px-20 pt-32 pb-20 h-[476px] w-full"
     >
         <div className="absolute inset-0 opacity-80">
           <img 
-            src="https://img.freepik.com/free-photo/businessman-using-laptop-mobile-phone_1421-526.jpg" 
+            src={img} 
             alt="Contact Background" 
             className="w-full h-full object-cover"
           />

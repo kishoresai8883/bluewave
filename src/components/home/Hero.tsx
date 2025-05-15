@@ -6,7 +6,7 @@ import img from '../../assets/bw-img1.jpg'
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-r from-green-700 via-teal-700 to-blue-900 text-white pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+    <section className="relative bg-gradient-to-r from-green-700 via-teal-700 to-blue-900 text-white px-20 pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
       {/* Abstract background shapes */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl"></div>

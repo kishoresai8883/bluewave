@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, X } from 'lucide-react';
+import gallery from '../assets/gallery-img.webp';
 import img from '../assets/gallery-img9.jpg';
 import img1 from '../assets/gallery-img10.jpg';
 import img2 from '../assets/gallery-img5.jpg';
@@ -108,10 +109,10 @@ const Gallery = () => {
       transition={{ duration: 0.4 }}
     >
       {/* Hero Section */}
-      <section className="relative bg-slate-700 text-white pt-32 pb-20 h-[476px]">
+      <section className="relative bg-slate-700 text-white px-20 pt-32 pb-20 h-[476px]">
         <div className="absolute inset-0 opacity-80">
           <img 
-            src="https://images.pexels.com/photos/577586/pexels-photo-577586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            src={gallery}
             alt="Gallery Background" 
             className="w-full h-full object-cover"
           />
@@ -131,7 +132,7 @@ const Gallery = () => {
 
 
       {/* Gallery */}
-      <section className="py-16">
+      <section className="py-16 px-20">
         <div className="container mx-auto px-4 md:px-6">
           {filteredItems.length === 0 ? (
             <div className="text-center py-12">

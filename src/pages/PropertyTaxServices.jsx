@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
-import img from './../assets/gallery-img4.png'
-import img1 from './../assets/img10.jpeg'
-import img2 from './../assets/gallery-img9.jpg'
-import img3 from './../assets/img12.png'
+import img from '../assets/propertytax.jpg';
+import img1 from './../assets/gallery-img4.png'
+import img2 from './../assets/img10.jpeg'
+import img3 from './../assets/gallery-img9.jpg'
+import img4 from './../assets/img12.png'
 
 const services = [
   {
@@ -19,7 +20,7 @@ const services = [
       'Photographic documentation of property',
       'Mobile survey application integration'
     ],
-    image: img
+    image: img1
   },
   {
     id: 2,
@@ -32,7 +33,7 @@ const services = [
       'Owner login for self-assessment and updates',
       'API support for third-party software and portals'
     ],
-    image: img1
+    image: img2
   },
   {
     id: 3,
@@ -45,7 +46,7 @@ const services = [
       'ULB review panel and correction workflows',
       'Final demand register creation and publishing'
     ],
-    image: img2
+    image: img3
   },
   {
     id: 4,
@@ -59,7 +60,7 @@ const services = [
       'Ongoing field verification',
       'Mapping of new buildings and modifications'
     ],
-    image: img3
+    image: img4
   },
 ];
 
@@ -71,14 +72,15 @@ const PropertyTaxServices = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="relative bg-slate-500 text-white pt-32 pb-20 h-[476px] w-full"
+      className="relative bg-slate-500 text-white px-20 pt-32 pb-20 h-[476px] w-full"
     >
         <div className="absolute inset-0 opacity-80">
           <img 
-            src="https://img.freepik.com/free-photo/partnership-handshake-innovation-corporate-business-concept_53876-104048.jpg" 
+            src={img} 
             alt="About Us Background" 
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-slate-800 opacity-80"></div>
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">

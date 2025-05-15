@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
-import img from './../assets/img4.jpg'
-import img1 from './../assets/img5.jpg'
-import img2 from './../assets/img6.jpg'
-import img3 from './../assets/img7.jpeg'
+import img from '../assets/manpower.webp';
+import img1 from './../assets/img4.jpg'
+import img2 from './../assets/img5.jpg'
+import img3 from './../assets/img6.jpg'
+import img4 from './../assets/img7.jpeg'
 
 const services = [
   {
@@ -18,7 +19,7 @@ const services = [
       'Technical Field Staff',
       'Industry-specific skilled roles'
     ],
-    image: img
+    image: img1
   },
   {
     id: 2,
@@ -32,7 +33,7 @@ const services = [
       'Flexible workforce for short-term or long-term projects',
       'Quick onboarding and deployment'
     ],
-    image: img1
+    image: img2
   },
   {
     id: 3,
@@ -46,7 +47,7 @@ const services = [
       'Experience with schemes like SVAMITVA and municipal projects',
       'Stenographers and clerical staff for tribunals and administrative offices'
     ],
-    image: img2
+    image: img3
   },
   {
     id: 4,
@@ -60,7 +61,7 @@ const services = [
       'Performance tracking and reporting',
       'GIS, survey, and IT project support'
     ],
-    image: img3
+    image: img4
   },
 ];
 
@@ -72,14 +73,15 @@ const ManpowerServices = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="relative bg-slate-500 text-white pt-32 pb-20 h-[476px] w-full"
+      className="relative bg-slate-500 text-white px-20 pt-32 pb-20 h-[476px] w-full"
     >
         <div className="absolute inset-0 opacity-80">
           <img 
-            src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15866.jpg" 
+            src={img} 
             alt="About Us Background" 
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-slate-800 opacity-80"></div>
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">

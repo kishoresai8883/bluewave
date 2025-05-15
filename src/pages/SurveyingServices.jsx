@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
-import img from './../assets/gallery-img6.png'
-import img1 from './../assets/img8.jpg'
-import img2 from './../assets/gallery-img12.jpg'
-import img3 from './../assets/img9.png'
+import img from '../assets/surveying.jpg';
+import img1 from './../assets/gallery-img6.png'
+import img2 from './../assets/img8.jpg'
+import img3 from './../assets/gallery-img12.jpg'
+import img4 from './../assets/img9.png'
+import { i } from 'framer-motion/client';
 
 const services = [
   {
@@ -19,7 +21,7 @@ const services = [
       'Slope, drainage, and terrain features',
       'Essential for civil engineering and development planning'
     ],
-    image: img
+    image: img1
   },
   {
     id: 2,
@@ -32,7 +34,7 @@ const services = [
       'Cost-effective for large-scale areas',
       'Ideal for urban planning, agriculture, and infrastructure projects'
     ],
-    image: img1
+    image: img2
   },
   {
     id: 3,
@@ -46,7 +48,7 @@ const services = [
       'Infrastructure layout and road alignment',
       'Ideal for cadastral and construction surveys'
     ],
-    image: img2
+    image: img3
   },
   {
     id: 4,
@@ -59,7 +61,7 @@ const services = [
       'Web GIS and dashboard-ready outputs',
       'Supports real-time monitoring and updates'
     ],
-    image: img3
+    image: img4
   },
 ];
 
@@ -71,11 +73,11 @@ const SurveyingServices = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="relative bg-slate-500 text-white pt-32 pb-20 h-[476px] w-full"
+      className="relative bg-slate-500 text-white px-20 pt-32 pb-20 h-[476px] w-full"
     >
         <div className="absolute inset-0 opacity-80">
           <img 
-            src="https://img.freepik.com/free-photo/business-people-blue-background_53876-101889.jpg" 
+            src={img} 
             alt="About Us Background" 
             className="w-full h-full object-cover"
           />

@@ -6,7 +6,7 @@ import bgimg from '../../assets/BG-8.jpg';
 
 const CTA = () => {
   return (
-    <section className="py-20 bg-cover text-white" style={{ backgroundImage: `url(${bgimg})` }}>
+    <section className="py-20 px-20 bg-cover text-white" style={{ backgroundImage: `url(${bgimg})` }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <motion.div
