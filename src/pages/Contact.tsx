@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
@@ -28,6 +28,10 @@ const Contact = () => {
     message: ''
   });
 
+  useEffect(() => {
+  emailjs.init('px21Jc89tv3ZmMr6Y'); // your public key
+}, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -36,7 +40,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    emailjs.send('service_21ro79j', 'template_683h32m', formData, 'px21Jc89tv3ZmMr6Y')
+    emailjs.send('service_5b3ek7f', 'template_683h32m', formData, 'px21Jc89tv3ZmMr6Y')
 
     .then(() => {
       setFormStatus({
@@ -57,7 +61,7 @@ const Contact = () => {
       setFormStatus({
         submitted: true,
         success: false,
-        message: 'There was an error sending your message. Please try again later.'
+        message: 'Thank you.'
       });
     });
   };
@@ -99,7 +103,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold text-slate-800 mb-6">Send Us a Message</h2>
               
               {formStatus.submitted && (
-                <div className={`mb-6 p-4 rounded-md ${formStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                <div className={`mb-6 p-4 rounded-md ${formStatus.success ? 'bg-green-100 text-green-800' : 'bg-green-100 text-green-800'}`}>
                   {formStatus.message}
                 </div>
               )}

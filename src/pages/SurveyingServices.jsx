@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
+import img from './../assets/gallery-img6.png'
+import img1 from './../assets/img8.jpg'
+import img2 from './../assets/gallery-img12.jpg'
+import img3 from './../assets/img9.png'
 
 const services = [
   {
@@ -15,7 +19,7 @@ const services = [
       'Slope, drainage, and terrain features',
       'Essential for civil engineering and development planning'
     ],
-    image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg'
+    image: img
   },
   {
     id: 2,
@@ -28,7 +32,7 @@ const services = [
       'Cost-effective for large-scale areas',
       'Ideal for urban planning, agriculture, and infrastructure projects'
     ],
-    image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
+    image: img1
   },
   {
     id: 3,
@@ -42,7 +46,7 @@ const services = [
       'Infrastructure layout and road alignment',
       'Ideal for cadastral and construction surveys'
     ],
-    image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
+    image: img2
   },
   {
     id: 4,
@@ -55,7 +59,7 @@ const services = [
       'Web GIS and dashboard-ready outputs',
       'Supports real-time monitoring and updates'
     ],
-    image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
+    image: img3
   },
 ];
 

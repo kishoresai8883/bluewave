@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
+import img from './../assets/gallery-img4.png'
+import img1 from './../assets/img10.jpeg'
+import img2 from './../assets/gallery-img9.jpg'
+import img3 from './../assets/img12.png'
 
 const services = [
   {
@@ -15,7 +19,7 @@ const services = [
       'Photographic documentation of property',
       'Mobile survey application integration'
     ],
-    image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg'
+    image: img
   },
   {
     id: 2,
@@ -28,7 +32,7 @@ const services = [
       'Owner login for self-assessment and updates',
       'API support for third-party software and portals'
     ],
-    image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
+    image: img1
   },
   {
     id: 3,
@@ -41,7 +45,7 @@ const services = [
       'ULB review panel and correction workflows',
       'Final demand register creation and publishing'
     ],
-    image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
+    image: img2
   },
   {
     id: 4,
@@ -55,7 +59,7 @@ const services = [
       'Ongoing field verification',
       'Mapping of new buildings and modifications'
     ],
-    image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
+    image: img3
   },
 ];
 

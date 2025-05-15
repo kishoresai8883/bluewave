@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
+import img from './../assets/img4.jpg'
+import img1 from './../assets/img5.jpg'
+import img2 from './../assets/img6.jpg'
+import img3 from './../assets/img7.jpeg'
 
 const services = [
   {
@@ -14,7 +18,7 @@ const services = [
       'Technical Field Staff',
       'Industry-specific skilled roles'
     ],
-    image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg'
+    image: img
   },
   {
     id: 2,
@@ -28,7 +32,7 @@ const services = [
       'Flexible workforce for short-term or long-term projects',
       'Quick onboarding and deployment'
     ],
-    image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
+    image: img1
   },
   {
     id: 3,
@@ -42,7 +46,7 @@ const services = [
       'Experience with schemes like SVAMITVA and municipal projects',
       'Stenographers and clerical staff for tribunals and administrative offices'
     ],
-    image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
+    image: img2
   },
   {
     id: 4,
@@ -56,7 +60,7 @@ const services = [
       'Performance tracking and reporting',
       'GIS, survey, and IT project support'
     ],
-    image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
+    image: img3
   },
 ];
 

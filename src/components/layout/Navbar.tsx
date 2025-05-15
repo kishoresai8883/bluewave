@@ -67,7 +67,7 @@ const handleMouseLeave = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="logo" className={`w-14 h-14 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
+          <img src={logo} alt="logo" className={`w-12 h-12 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
             <span className={`text-xl logo-name ${scrolled ? 'text-slate-900' : 'text-slate-900'} transition-colors`}>
               BLUEWAVE
             </span>

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-import img from '../../assets/bw-img2.webp'
+import img from '../../assets/bw-img2.jpg'
 
 const AboutSection = () => {
   const features = [
@@ -38,7 +38,7 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <div className="absolute -bottom-8 -right-8 w-64 rounded-lg shadow-xl overflow-hidden border-4 border-white hidden md:block">
+            <div className="absolute -bottom-10 -right-8 w-64 rounded-lg shadow-xl overflow-hidden border-4 border-white hidden md:block">
               <img 
                 src="https://images.pexels.com/photos/313691/pexels-photo-313691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
                 alt="GIS Technology" 

@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
+import img1 from './../assets/img1.jpeg';
+import img2 from './../assets/img2.jpg';
+import img3 from './../assets/img3.jpg';
+import img4 from './../assets/gallery-img8.jpg';
 
 const services = [
   {
@@ -15,7 +19,7 @@ const services = [
       'Data Digitization & Integration',
       'GIS Visualization (SVAMITVA, Smart City Projects)',
     ],
-    image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg'
+    image: img1
   },
   {
     id: 2,
@@ -29,7 +33,7 @@ const services = [
       'Ground Control Point (GCP) collection using DGPS',
       'Data layering from multiple government and private sources'
     ],
-    image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
+    image: img2
   },
   {
     id: 3,
@@ -43,7 +47,7 @@ const services = [
       'Custom dashboards and reporting tools',
       'Real-time data analytics and location intelligence'
     ],
-    image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg'
+    image: img3
   },
   {
     id: 4,
@@ -56,7 +60,7 @@ const services = [
       'SVAMITVA scheme implementation',
       'Property card (Sanad) generation and distribution'
     ],
-    image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg'
+    image: img4
   },
 ];
 

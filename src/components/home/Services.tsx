@@ -60,11 +60,12 @@ const ServicesSection = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0, scale: 0.95 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5 }
+      scale: 1,
+      transition: { duration: 0.5, ease: 'easeOut' }
     }
   };
 
@@ -88,8 +89,9 @@ const ServicesSection = () => {
           {services.map((service) => (
             <motion.div 
               key={service.id}
-              className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow group"
-              variants={itemVariants}
+              className="bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#00a388] via-[#79bd8f] to-[#beeb9f] rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow group"
+              variants={itemVariants} 
+              whileHover={{ scale: 1.03, y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
             >
               <div className="bg-blue-50 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
                 {service.icon}
