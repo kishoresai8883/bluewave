@@ -109,7 +109,7 @@ const Gallery = () => {
       transition={{ duration: 0.4 }}
     >
       {/* Hero Section */}
-      <section className="relative bg-slate-700 text-white px-20 pt-32 pb-20 h-[476px]">
+      <section className="relative bg-slate-700 text-white lg:px-20 pt-32 pb-20 h-[476px]">
         <div className="absolute inset-0 opacity-80">
           <img 
             src={gallery}
@@ -132,7 +132,7 @@ const Gallery = () => {
 
 
       {/* Gallery */}
-      <section className="py-16 px-20">
+      <section className="py-16 lg:px-20">
         <div className="container mx-auto px-4 md:px-6">
           {filteredItems.length === 0 ? (
             <div className="text-center py-12">

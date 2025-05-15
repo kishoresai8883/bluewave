@@ -74,7 +74,7 @@ const Contact = () => {
       transition={{ duration: 0.4 }}
     >
       {/* Hero Section */}
-      <section className="relative bg-slate-500 text-white px-20 pt-32 pb-20 h-[476px]">
+      <section className="relative bg-slate-500 text-white lg:px-20 pt-32 pb-20 h-[476px]">
         <div className="absolute inset-0 opacity-80">
           <img 
             src="https://img.freepik.com/free-photo/businessman-using-laptop-mobile-phone_1421-526.jpg" 
@@ -95,7 +95,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info + Form */}
-      <section className="py-20 px-20">
+      <section className="py-20 lg:px-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}

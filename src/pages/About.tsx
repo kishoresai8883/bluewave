@@ -86,7 +86,7 @@ const About = () => {
       transition={{ duration: 0.4 }}
     >
       {/* Hero Section */}
-      <section className="relative bg-slate-400 text-white px-20 pt-32 pb-20 h-[476px]">
+      <section className="relative bg-slate-400 text-white lg:px-20 pt-32 pb-20 h-[476px]">
         <div className="absolute inset-0 opacity-60">
           <img 
             src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15866.jpg" 
@@ -108,7 +108,7 @@ const About = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 px-20">
+      <section className="py-20 lg:px-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -159,7 +159,7 @@ const About = () => {
       </section>
 
       {/* Our Values */}
-      <section className="py-20 px-20">
+      <section className="py-20 lg:px-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-800 mb-4">Our Core Values</h2>
@@ -183,7 +183,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-20 bg-slate-50 text-slate-900">
+      <section className="py-20 lg:px-20 bg-slate-50 text-slate-900">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Our Leadership Team</h2>

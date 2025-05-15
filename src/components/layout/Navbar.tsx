@@ -60,7 +60,7 @@ const handleMouseLeave = () => {
 
   return (
     <header 
-      className={`fixed w-full px-20 top-0 z-50 transition-all duration-300 ${
+      className={`fixed w-full lg:px-20 top-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-white py-5'
       }`}
     >
