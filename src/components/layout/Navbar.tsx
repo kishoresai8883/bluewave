@@ -48,9 +48,9 @@ const handleMouseLeave = () => {
       path: '/services',
       dropdown: [
         { name: 'Geospatial & GIS Services', path: '/services/gis' },
-        { name: 'Manpower & Staffing Services', path: '/services/manpower' },
         { name: 'Surveying & Mapping Services', path: '/services/surveying' },
         { name: 'Property Tax Assessment Solutions', path: '/services/propertytax' },
+        { name: 'Manpower & Staffing Services', path: '/services/manpower' },
       ]
     },
   //  { name: 'Clients', path: '/clients' },
@@ -68,7 +68,7 @@ const handleMouseLeave = () => {
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center">
           <img src={logo} alt="logo" className={`w-12 h-12 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
-            <span className={`text-xl logo-name ${scrolled ? 'text-slate-900' : 'text-slate-900'} transition-colors`}>
+            <span className={`text-xl logo-name-bold ${scrolled ? 'text-blue-900' : 'text-blue-900'} transition-colors`}>
               BLUEWAVE
             </span>
           </NavLink>

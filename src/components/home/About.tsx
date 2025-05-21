@@ -54,7 +54,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-              About <span className="text-orange-400">Bluewave</span>
+              About <span className="text-orange-400 logo-name-bold">Bluewave</span>
             </h2>
             <p className="text-lg text-slate-600 mb-6">
             We are a leading provider of GIS consultation, surveying services, and manpower solutions. Our in-house capabilities cover the full spectrum of GIS work, delivered by a dedicated team committed to achieving excellence and meeting project goals with precision.

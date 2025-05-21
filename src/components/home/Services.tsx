@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Map, Users, Database, LineChart, Globe, BarChart3, ArrowRight } from 'lucide-react';
+import img from '../../assets/bw-img1.jpg'
 
 const ServicesSection = () => {
   const services = [
@@ -10,42 +11,48 @@ const ServicesSection = () => {
       icon: <Map className="w-10 h-10 text-blue-600" />,
       title: 'GIS Mapping',
       description: 'Create detailed interactive maps with accurate spatial data representation.',
-      link: '/services'
+      image: img,
+      link: '/services/gis'
     },
     {
       id: 2,
       icon: <Database className="w-10 h-10 text-blue-600" />,
       title: 'Drone Surveying',
-      description: 'Extract meaningful insights from geographical data with advanced analysis tools.',
-      link: '/services'
+      description: 'Extract meaningful insights from geographical data with advanced analysis.',
+      image: img,
+      link: '/services/surveying'
     },
     {
       id: 3,
       icon: <Globe className="w-10 h-10 text-blue-600" />,
       title: 'Manpower',
       description: 'Utilize satellite imagery and remote data collection for comprehensive information.',
-      link: '/services'
+      image: img,
+      link: '/services/manpower'
     },
     {
       id: 4,
       icon: <Users className="w-10 h-10 text-blue-600" />,
       title: 'Technical Staffing',
       description: 'Access skilled GIS professionals and technical experts for your project needs.',
-      link: '/services'
+      image: img,
+      link: '/services/manpower'
     },
     {
       id: 5,
       icon: <LineChart className="w-10 h-10 text-blue-600" />,
       title: 'DGPS Surveying',
       description: 'End-to-end management of complex GIS projects with timely delivery.',
-      link: '/services'
+      image: img,
+      link: '/services/surveying'
     },
     {
       id: 6,
       icon: <BarChart3 className="w-10 h-10 text-blue-600" />,
       title: 'Geo Tagging',
       description: 'Comprehensive field data collection and validation services for accurate results.',
-      link: '/services'
+      image: img,
+      link: '/services/propertytax'
     }
   ];
 
@@ -89,28 +96,29 @@ const ServicesSection = () => {
           {services.map((service) => (
             <motion.div 
               key={service.id}
-              className="bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#00a388] via-[#79bd8f] to-[#beeb9f] rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow group"
+              className="bg-gradient-to-r from-[#f4f5f5] to-[#f1f7ed] rounded-lg shadow-md hover:shadow-lg transition-shadow group"
               variants={itemVariants} 
               whileHover={{ scale: 1.03, y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
             >
-              <div className="bg-blue-50 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
-                {service.icon}
+              <div className="w-full h-44 flex rounded-t-lg overflow-hidden items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+                <img src={service.image} className='w-full h-full object-cover' alt="service" />
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-3">{service.title}</h3>
-              <p className="text-slate-600 mb-4">{service.description}</p>
+              <div className="px-8 py-3 flex flex-col flex-grow justify-between">
+                <h3 className="text-xl font-bold text-slate-800 mb-3">{service.title}</h3>
+                <p className="text-slate-600 mb-4">{service.description}</p>
+              </div>
+              <div className='pb-6 flex justify-center'>
+                <Link 
+                  to={service.link} 
+                  className="inline-flex items-center bg-blue-600 text-white py-2 px-6 rounded-md font-medium hover:bg-blue-700 transition-colors"
+                  >
+                    View More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+              </div>
             </motion.div>
           ))}
         </motion.div>
-
-        <div className="text-center mt-12">
-          <Link 
-            to="/services" 
-            className="inline-flex items-center bg-blue-600 text-white py-3 px-6 rounded-md font-medium hover:bg-blue-700 transition-colors"
-          >
-            View All Services
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
-        </div>
       </div>
     </section>
   );
