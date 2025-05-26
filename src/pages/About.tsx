@@ -93,7 +93,7 @@ const About = () => {
             alt="About Us Background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-slate-800 opacity-80"></div>
+          <div className="absolute inset-0 bg-slate-800 opacity-70"></div>
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">

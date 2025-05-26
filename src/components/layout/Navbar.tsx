@@ -50,6 +50,8 @@ const handleMouseLeave = () => {
         { name: 'Geospatial & GIS Services', path: '/services/gis' },
         { name: 'Surveying & Mapping Services', path: '/services/surveying' },
         { name: 'Property Tax Assessment Solutions', path: '/services/propertytax' },
+        { name: 'Underground Water Services', path: '/services/undergroundwater' },
+        { name: 'Surface Water Services', path: '/services/surfacewater' },
         { name: 'Manpower & Staffing Services', path: '/services/manpower' },
       ]
     },
@@ -67,10 +69,15 @@ const handleMouseLeave = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="logo" className={`w-12 h-12 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
-            <span className={`text-xl logo-name-bold ${scrolled ? 'text-blue-900' : 'text-blue-900'} transition-colors`}>
-              BLUEWAVE
-            </span>
+          <img src={logo} alt="logo" className={`w-14 h-14 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
+            <div className="flex flex-col">
+              <span className={`text-xl logo-name-bold ${scrolled ? 'text-blue-900' : 'text-blue-900'} transition-colors`}>
+                BLUEWAVE
+              </span>
+              <span className={`text-md logo-name-bold ${scrolled ? 'text-slate-800' : 'text-black'} transition-colors`}>
+                GIS & Manpower Solutions Pvt Ltd
+              </span>
+            </div>
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -95,7 +102,7 @@ const handleMouseLeave = () => {
                   </div>
                 
                   {servicesOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-slate-100 rounded-lg shadow-lg py-2 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-slate-100 rounded-lg shadow-lg py-2 z-50">
                       {link.dropdown.map((item) => (
                         <NavLink
                           key={item.name}

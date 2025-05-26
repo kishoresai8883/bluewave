@@ -77,11 +77,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Globe2, Users2, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
+import img from '../../assets/home-img.jpg'
 
 const carouselImages = [
-  "https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/5302804/pexels-photo-5302804.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/4491446/pexels-photo-4491446.jpeg?auto=compress&cs=tinysrgb&w=1600"
+  "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg?auto=compress&cs=tinysrgb&w=1600"
 ];
 
 const features = [

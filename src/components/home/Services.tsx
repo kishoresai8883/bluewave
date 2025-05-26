@@ -2,7 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Map, Users, Database, LineChart, Globe, BarChart3, ArrowRight } from 'lucide-react';
-import img from '../../assets/bw-img1.jpg'
+import img from '../../assets/service.jpg'
+import img1 from '../../assets/service1.jpeg'
+import img2 from '../../assets/service2.webp'
+import img3 from '../../assets/service5.jpg'
+import img4 from '../../assets/service3.jpeg'
+import img5 from '../../assets/service4.jpg'
 
 const ServicesSection = () => {
   const services = [
@@ -19,40 +24,40 @@ const ServicesSection = () => {
       icon: <Database className="w-10 h-10 text-blue-600" />,
       title: 'Drone Surveying',
       description: 'Extract meaningful insights from geographical data with advanced analysis.',
-      image: img,
+      image: img1,
       link: '/services/surveying'
     },
     {
       id: 3,
       icon: <Globe className="w-10 h-10 text-blue-600" />,
-      title: 'Manpower',
-      description: 'Utilize satellite imagery and remote data collection for comprehensive information.',
-      image: img,
-      link: '/services/manpower'
+      title: 'Groundwater Quality Testing',
+      description: 'The quality of groundwater can affect not only our health, but also society and the economy.',
+      image: img2,
+      link: '/services/groundwater'
     },
     {
       id: 4,
       icon: <Users className="w-10 h-10 text-blue-600" />,
-      title: 'Technical Staffing',
-      description: 'Access skilled GIS professionals and technical experts for your project needs.',
-      image: img,
-      link: '/services/manpower'
+      title: 'Geo Tagging',
+      description: 'Geo-tagging is the process of adding geographic information about digital content, within “metadata” tags.',
+      image: img3,
+      link: '/services/surveying'
     },
     {
       id: 5,
       icon: <LineChart className="w-10 h-10 text-blue-600" />,
       title: 'DGPS Surveying',
       description: 'End-to-end management of complex GIS projects with timely delivery.',
-      image: img,
+      image: img4,
       link: '/services/surveying'
     },
     {
       id: 6,
       icon: <BarChart3 className="w-10 h-10 text-blue-600" />,
-      title: 'Geo Tagging',
-      description: 'Comprehensive field data collection and validation services for accurate results.',
-      image: img,
-      link: '/services/propertytax'
+      title: 'Manpower',
+      description: 'Utilize satellite imagery and remote data collection for comprehensive information.',
+      image: img5,
+      link: '/services/manpower'
     }
   ];
 

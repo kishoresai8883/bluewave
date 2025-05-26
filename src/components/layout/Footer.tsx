@@ -21,7 +21,10 @@ const Footer = () => {
           <div>
             <NavLink to="/" className="flex items-center mb-4">
               <img src={logo} alt="logo"  className="w-12 h-12 text-blue-500 mr-2" />
-              <span className="text-xl font-bold logo-name-bold">BLUEWAVE</span>
+              <div className='flex flex-col'>
+                <span className="text-lg font-bold logo-name-bold">BLUEWAVE</span>
+                <span className={`text-sm logo-name-bold  transition-colors`}>GIS & Manpower Solutions Pvt Ltd</span>
+              </div>
             </NavLink>
             <p className="text-slate-300 mb-4">
               Leading provider of innovative GIS solutions and expert manpower services, delivering excellence since 2015.
@@ -72,13 +75,19 @@ const Footer = () => {
                 <Link to="/services/gis" className="text-slate-300 hover:text-blue-500 transition-colors">GIS Mapping</Link>
               </li>
               <li>
-                <Link to="/services/manpower" className="text-slate-300 hover:text-blue-500 transition-colors">Manpower & Staffing</Link>
-              </li>
-              <li>
                 <Link to="/services/surveying" className="text-slate-300 hover:text-blue-500 transition-colors">Surveying & Mapping</Link>
               </li>
               <li>
+                <Link to="/services/undergroundwater" className="text-slate-300 hover:text-blue-500 transition-colors">Underground Water</Link>
+              </li>
+              <li>
+                <Link to="/services/surfacewater" className="text-slate-300 hover:text-blue-500 transition-colors">Surface Water</Link>
+              </li>
+              <li>
                 <Link to="/services/propertytax" className="text-slate-300 hover:text-blue-500 transition-colors">Property Tax Assessment</Link>
+              </li>
+              <li>
+                <Link to="/services/manpower" className="text-slate-300 hover:text-blue-500 transition-colors">Manpower & Staffing</Link>
               </li>
             </ul>
           </div>
