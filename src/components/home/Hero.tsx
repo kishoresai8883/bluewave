@@ -193,7 +193,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto text-center text-white"
+              className="max-w-6xl mx-auto text-center text-white"
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                 <span className='text-orange-400 logo-name-bold'>BLUEWAVE</span> is a Leading GIS, Geospatial & Manpower Services
