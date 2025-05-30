@@ -31,7 +31,7 @@ const ServicesSection = () => {
       id: 3,
       icon: <Globe className="w-10 h-10 text-blue-600" />,
       title: 'Groundwater Quality Testing',
-      description: 'The quality of groundwater can affect not only our health, but also society and the economy.',
+      description: 'The quality of groundwater can affect not only our health also society and economy.',
       image: img2,
       link: '/services/groundwater'
     },
@@ -39,7 +39,7 @@ const ServicesSection = () => {
       id: 4,
       icon: <Users className="w-10 h-10 text-blue-600" />,
       title: 'Geo Tagging',
-      description: 'Geo-tagging is the process of adding geographic information about digital content, within “metadata” tags.',
+      description: 'It is the process of adding geographic information about digital content.',
       image: img3,
       link: '/services/surveying'
     },
@@ -82,7 +82,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section id='service' className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Specialized Services</h2>

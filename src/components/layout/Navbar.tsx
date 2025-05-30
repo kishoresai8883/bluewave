@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { HashLink } from 'react-router-hash-link'
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import logo from '../../assets/bluewave-logo.png';
 import '../../index.css'
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +47,7 @@ const handleMouseLeave = () => {
     { name: 'About', path: '/about' },
     {
       name: 'Services',
-      path: '/services',
+      path: '/about',
       dropdown: [
         { name: 'Geospatial & GIS Services', path: '/services/gis' },
         { name: 'Surveying & Mapping Services', path: '/services/surveying' },
@@ -74,11 +76,14 @@ const handleMouseLeave = () => {
               <span className={`text-xl logo-name-bold ${scrolled ? 'text-blue-900' : 'text-blue-900'} transition-colors`}>
                 BLUEWAVE
               </span>
-              <span className={`text-md logo-name-bold ${scrolled ? 'text-slate-800' : 'text-black'} transition-colors`}>
+              <span className={`hidden md:block text-md logo-name-bold ${scrolled ? 'text-slate-800' : 'text-black'} transition-colors`}>
                 GIS & Manpower Solutions Pvt Ltd
               </span>
             </div>
           </NavLink>
+          <div className='flex items-center justify-center hidden md:block'>
+            <h2 className='border-b-2 animate-pulse logo-name-regular text-lg text-blue-900'>The Solutions of Real-World Problems</h2>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -91,11 +96,14 @@ const handleMouseLeave = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="flex items-center cursor-pointer">
-                    <span className={`text-lg font-medium transition-colors ${
+                    <HashLink to="/#service">
+                      <span className={`text-lg font-medium transition-colors ${
                       scrolled ? 'text-slate-700 hover:text-blue-600' : 'text-slate-700 hover:text-blue-600'
                     }`}>
                       Services
                     </span>
+                    </HashLink>
+                    
                     <ChevronDown className={`w-4 h-4 ml-1 ${
                       scrolled ? 'text-slate-700' : 'text-slate-700'
                     }`} />
@@ -160,13 +168,13 @@ const handleMouseLeave = () => {
   <div key={link.name} className="w-full">
     {link.dropdown ? (
       <>
-        <button
+        <HashLink to="/#service"
           className="flex justify-between items-center w-full py-3 px-4 text-sm font-medium text-slate-700"
           onClick={() => setServicesOpen(!servicesOpen)}
         >
           Services
           <ChevronDown className={`w-4 h-4 transform transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-        </button>
+        </HashLink>
         {servicesOpen && (
           <div className="pl-6">
             {link.dropdown.map((item) => (

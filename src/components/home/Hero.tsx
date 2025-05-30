@@ -196,9 +196,9 @@ const Hero = () => {
               className="max-w-4xl mx-auto text-center text-white"
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                <span className='text-orange-400 logo-name-bold'>Bluewave</span> is a Leading GIS, Geospatial & Manpower Services
+                <span className='text-orange-400 logo-name-bold'>BLUEWAVE</span> is a Leading GIS, Geospatial & Manpower Services
               </h1>
-              <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl">
+              <p className="text-center text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 We provide expert GIS consultation, surveying, and manpower services with a focus on quality and precision.
               </p>
               <div className="flex justify-center gap-4">
