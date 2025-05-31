@@ -82,7 +82,7 @@ const handleMouseLeave = () => {
             </div>
           </NavLink>
           <div className='flex items-center justify-center hidden md:block'>
-            <h2 className='border-b-2 animate-pulse logo-name-regular text-lg text-blue-900'>The Solutions of Real-World Problems</h2>
+            <h2 className='border-b-2 animate-pulse logo-name-regular text-lg text-black'>The Solutions of Real-World Problems</h2>
           </div>
 
           {/* Desktop Navigation */}

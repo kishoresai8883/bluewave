@@ -77,13 +77,38 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Globe2, Users2, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
-import img from '../../assets/home-img.jpg'
+import img from '../../assets/DRONE_IMAGE.jpg'
 
-const carouselImages = [
-  "https://images.pexels.com/photos/5302804/pexels-photo-5302804.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg?auto=compress&cs=tinysrgb&w=1600"
+const carouselSlides = [
+  {
+    image: "https://images.pexels.com/photos/5302804/pexels-photo-5302804.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    title: "Delivering Precision Mapping for Informed Decisions.",
+    description: "Accurate land surveying and mapping solutions using advanced tools like DGPS, drones, and GIS for reliable planning and development.",
+    buttons: [
+      { label: "Get In Touch", link: "/contact", primary: true },
+      { label: "Learn More", link: "/about" }
+    ]
+  },
+  {
+    image: img,
+    title: "Transforming GIS with Precision",
+    description: "We deliver smart GIS solutions that transform spatial data into actionable insights for better planning and decision-making.",
+    buttons: [
+      { label: "Explore More", link: "/about", primary: true },
+      { label: "Our Team", link: "/about" }
+    ]
+  },
+  {
+    image: "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    title: "End-to-End Manpower Solutions for Diverse Workforce Requirements",
+    description: "We provide skilled, unskilled, and professional workforce tailored to project needs across diverse sectors.",
+    buttons: [
+      { label: "Get Started", link: "/contact", primary: true },
+      { label: "See Projects", link: "/gallery" }
+    ]
+  }
 ];
+
 
 const features = [
   {
@@ -107,7 +132,8 @@ const Hero = () => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const imageIndex = Math.abs(page % carouselImages.length);
+  const imageIndex = Math.abs(page % carouselSlides.length);
+  const currentSlide = carouselSlides[imageIndex];
 
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
@@ -161,10 +187,10 @@ const Hero = () => {
             <div 
               className="absolute inset-0 w-full h-full bg-cover bg-center transform"
               style={{ 
-                backgroundImage: `url(${carouselImages[imageIndex]})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
+              backgroundImage: `url(${currentSlide.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
             />
             <div className="absolute inset-0 bg-black bg-opacity-50" />
           </motion.div>
@@ -196,27 +222,34 @@ const Hero = () => {
               className="max-w-6xl mx-auto text-center text-white"
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                <span className='text-orange-400 logo-name-bold'>BLUEWAVE</span> is a Leading GIS, Geospatial & Manpower Services
+                {currentSlide.title}
               </h1>
-              <p className="text-center text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                We provide expert GIS consultation, surveying, and manpower services with a focus on quality and precision.
+              <p className="text-center text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
+                {currentSlide.description}
               </p>
-              <div className="flex justify-center gap-4">
-                <Link to='/contact' className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold flex items-center transition-all transform hover:scale-105">
-                  Get In Touch
-                  <ArrowRight className="ml-2" />
-                </Link>
-                <Link to='/about' className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold backdrop-blur-sm transition-all">
-                  Learn More
-                </Link>
-              </div>
+              <div className="flex justify-center gap-4 flex-wrap">
+                {currentSlide.buttons.map((btn, idx) => (
+              <Link
+                key={idx}
+                to={btn.link}
+                className={`px-8 py-4 rounded-full font-semibold flex items-center transition-all transform hover:scale-105 ${
+                btn.primary
+                  ? 'bg-orange-500 hover:bg-orange-600 text-white'
+                  : 'bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm'
+              }`}
+              >
+                {btn.label}
+                {btn.primary && <ArrowRight className="ml-2" />}
+              </Link>
+          ))}
+      </div>
             </motion.div>
           </div>
         </div>
 
         {/* Carousel Indicators */}
         <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2 z-20">
-          {carouselImages.map((_, index) => (
+          {carouselSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => setPage([index, index - imageIndex])}
