@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { 
   Send, 
@@ -28,43 +27,52 @@ const Contact = () => {
     message: ''
   });
 
-  useEffect(() => {
-  emailjs.init('px21Jc89tv3ZmMr6Y'); // your public key
-}, []);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    emailjs.send('service_5b3ek7f', 'template_683h32m', formData, 'px21Jc89tv3ZmMr6Y')
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  setFormStatus({ submitted: false, success: false, message: '' });
 
-    .then(() => {
+  const form = e.target;
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch('https://formspree.io/f/yourFormID', {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      form.reset();
       setFormStatus({
         submitted: true,
         success: true,
-        message: 'Thank you for your message! We will get back to you soon.'
+        message: '✅ Thank you! Your message has been sent.',
       });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
-    })
-    .catch((error) => {
-      console.error('EmailJS error:', error);
+    } else {
+      const result = await response.json();
       setFormStatus({
         submitted: true,
         success: false,
-        message: 'Thank you.'
+        message: result?.errors?.[0]?.message || '❌ Submission failed. Try again later.',
       });
+    }
+  } catch (err) {
+    console.error('Formspree error:', err);
+    setFormStatus({
+      submitted: true,
+      success: false,
+      message: '❌ Something went wrong. Please try again later.',
     });
-  };
+  }
+};
+
 
   return (
     <motion.div
@@ -103,12 +111,12 @@ const Contact = () => {
               <h2 className="text-2xl font-bold text-slate-800 mb-6">Send Us a Message</h2>
               
               {formStatus.submitted && (
-                <div className={`mb-6 p-4 rounded-md ${formStatus.success ? 'bg-green-100 text-green-800' : 'bg-green-100 text-green-800'}`}>
+                <div className={`mb-6 p-4 rounded-md ${formStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
                   {formStatus.message}
                 </div>
               )}
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" encType="multipart/form-data">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">

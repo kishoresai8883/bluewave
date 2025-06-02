@@ -17,6 +17,7 @@ import UndergroundWater from './pages/UndergroundWater';
 import SurfaceWater from './pages/SurfaceWater';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Careers from './pages/careers'
 
 // Scroll to top on page change
 import ScrollToTop from './components/utils/ScrollToTop';
@@ -40,6 +41,7 @@ function App() {
               <Route path="/services/surfacewater" element={<SurfaceWater />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/careers" element={<Careers />}/>
               <Route path="*" element={<Home />} />
             </Routes>
           </AnimatePresence>

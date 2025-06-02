@@ -100,7 +100,7 @@ const carouselSlides = [
   },
   {
     image: "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    title: "End-to-End Manpower Solutions for Diverse Workforce Requirements",
+    title: "bluewave is a Leading GIS Surveying & Manpower services",
     description: "We provide skilled, unskilled, and professional workforce tailored to project needs across diverse sectors.",
     buttons: [
       { label: "Get Started", link: "/contact", primary: true },
