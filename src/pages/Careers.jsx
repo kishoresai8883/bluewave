@@ -14,7 +14,7 @@ const [loading, setLoading] = useState(false);
     const data = new FormData(form);
 
     try {
-      const response = await fetch('https://formspree.io/f/yourFormID', {
+      const response = await fetch('https://formspree.io/f/xkgbngpl', {
         method: 'POST',
         body: data,
         headers: {
@@ -81,6 +81,19 @@ const [loading, setLoading] = useState(false);
           </div>
 
           <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              className="w-full px-4 py-3 rounded-md border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="+91 0123456789"
+            />
+          </div>
+
+          <div>
             <label className="block text-sm font-medium text-slate-700">Message</label>
             <textarea
               name="message"
@@ -89,17 +102,15 @@ const [loading, setLoading] = useState(false);
               placeholder="Write a brief message or cover letter..."
             ></textarea>
           </div>
-
-          <div>
+          {/* <div>
             <label className="block text-sm font-medium text-slate-700">Upload Resume (PDF, DOC)</label>
             <input
               type="file"
               name="resume"
               accept=".pdf,.doc,.docx"
-              required
               className="mt-1 block w-full text-slate-700"
             />
-          </div>
+          </div> */}
 
           <div className="text-center">
             <button
