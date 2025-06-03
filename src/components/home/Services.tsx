@@ -119,7 +119,7 @@ const ServicesSection = () => {
                   >
                     View More
                   <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+                </Link>
               </div>
             </motion.div>
           ))}

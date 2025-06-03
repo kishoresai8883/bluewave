@@ -1,331 +1,279 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Map, 
-  Database, 
-  Users, 
-  LineChart, 
-  Globe, 
-  BarChart3, 
-  Satellite, 
-  Layers, 
-  Cloud, 
-  CheckCircle,
-  Building,
-  ArrowRight,
-  ChevronDown
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { MapPin, Globe, Users2, Shield, Layers, Wrench } from 'lucide-react';
+import gis1 from '../assets/img1.jpeg';
+import gis2 from '../assets/img2.jpg';
+import gis3 from '../assets/img3.jpg';
+import gis4 from '../assets/gallery-img8.jpg';
+import surveying1 from './../assets/gallery-img6.png'
+import surveying2 from './../assets/img8.jpg'
+import surveying3 from './../assets/gallery-img12.jpg'
+import surveying4 from './../assets/img9.png'
+import property1 from './../assets/gallery-img4.png'
+import property2 from './../assets/img10.jpeg'
+import property3 from './../assets/gallery-img9.jpg'
+import property4 from './../assets/img12.png'
+import ug1 from './../assets/water-img.jpg'
+import ug2 from './../assets/water-img1.jpg'
+import ug3 from './../assets/water-img2.png'
+import ug4 from './../assets/water-img3.jpg'
+import sw1 from './../assets/surfacewater-img.webp'
+import sw2 from './../assets/surfacewater-img1.jpg'
+import sw3 from './../assets/surfacewater-img2.webp'
+import sw4 from './../assets/surfacewater-img3.webp'
+import manpower1 from './../assets/img4.jpg'
+import manpower2 from './../assets/img5.jpg'
+import manpower3 from './../assets/img6.jpg'
+import manpower4 from './../assets/img7.jpeg'
 
-const Services = () => {
+const serviceCategories = [
+  { id: 'gis', name: 'GIS & Geospatial', icon: <Globe className="w-6 h-6 text-blue-600" /> },
+  { id: 'surveying', name: 'Surveying & Mapping', icon: <MapPin className="w-6 h-6 text-blue-600" /> },
+  { id: 'property', name: 'Property Tax', icon: <Users2 className="w-6 h-6 text-blue-600" /> },
+  { id: 'underground', name: 'Underground Water', icon: <Shield className="w-6 h-6 text-blue-600" /> },
+  { id: 'surface', name: 'Surface Water', icon: <Layers className="w-6 h-6 text-blue-600" /> },
+  { id: 'manpower', name: 'Manpower', icon: <Wrench className="w-6 h-6 text-blue-600" /> },
+];
 
-  const services = {
-    gis: [
-      {
-        id: 1,
-        icon: <Map className="w-10 h-10 text-blue-600" />,
-        title: 'GIS Mapping',
-        description: 'Our custom GIS mapping services create detailed, interactive maps that visualize complex spatial data in intuitive ways.',
-        features: [
-          'Custom map creation and design',
-          'Interactive web maps and applications',
-          'Thematic mapping and visualization',
-          'High-resolution map production'
-        ],
-        image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      },
-      {
-        id: 2,
-        icon: <Database className="w-10 h-10 text-blue-600" />,
-        title: 'Spatial Analysis',
-        description: 'Transform raw geospatial data into actionable intelligence with our comprehensive spatial analysis services.',
-        features: [
-          'Proximity and buffer analysis',
-          'Spatial statistics and pattern detection',
-          'Network and routing analysis',
-          'Site suitability modeling'
-        ],
-        image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      },
-      {
-        id: 3,
-        icon: <Satellite className="w-10 h-10 text-blue-600" />,
-        title: 'Remote Sensing',
-        description: 'Access critical insights from satellite and aerial imagery with our advanced remote sensing capabilities.',
-        features: [
-          'Satellite imagery acquisition and analysis',
-          'Land use and land cover classification',
-          'Change detection and monitoring',
-          'Environmental assessment'
-        ],
-        image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      },
-      {
-        id: 4,
-        icon: <Layers className="w-10 h-10 text-blue-600" />,
-        title: 'Data Integration',
-        description: 'Seamlessly combine multiple data sources into a coherent geospatial framework for comprehensive analysis.',
-        features: [
-          'Multi-source data integration',
-          'Spatial database development',
-          'ETL processes for geospatial data',
-          'Legacy system integration'
-        ],
-        image: 'https://images.pexels.com/photos/4665064/pexels-photo-4665064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      },
-      {
-        id: 5,
-        icon: <Cloud className="w-10 h-10 text-blue-600" />,
-        title: 'GIS Cloud Solutions',
-        description: 'Deploy and manage scalable cloud-based GIS infrastructure for efficient data handling and application hosting.',
-        features: [
-          'Cloud GIS architecture design',
-          'SaaS GIS implementation',
-          'Performance optimization',
-          'Secure data storage and access'
-        ],
-        image: 'https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      }
-    ],
-    manpower: [
-      {
-        id: 1,
-        icon: <Users className="w-10 h-10 text-blue-600" />,
-        title: 'Technical Staffing',
-        description: 'Access highly skilled GIS professionals and technical experts for your project needs with our specialized staffing services.',
-        features: [
-          'GIS analysts and developers',
-          'Database administrators',
-          'Remote sensing specialists',
-          'Technical project managers'
-        ],
-        image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      },
-      {
-        id: 2,
-        icon: <LineChart className="w-10 h-10 text-blue-600" />,
-        title: 'Project Management',
-        description: 'Our experienced project managers ensure your GIS initiatives are delivered on time, within budget, and to specification.',
-        features: [
-          'End-to-end project coordination',
-          'Resource allocation and scheduling',
-          'Risk management and mitigation',
-          'Quality assurance and control'
-        ],
-        image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      },
-      {
-        id: 3,
-        icon: <BarChart3 className="w-10 h-10 text-blue-600" />,
-        title: 'Field Data Collection',
-        description: 'Gather accurate geospatial data in the field with our comprehensive collection and validation services.',
-        features: [
-          'Mobile data collection',
-          'GPS/GNSS surveying',
-          'Field verification and QA',
-          'Data processing and integration'
-        ],
-        image: 'https://images.pexels.com/photos/9467456/pexels-photo-9467456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      },
-      {
-        id: 4,
-        icon: <Globe className="w-10 h-10 text-blue-600" />,
-        title: 'Training & Support',
-        description: 'Empower your team with the knowledge and skills they need to leverage GIS technology effectively.',
-        features: [
-          'Customized GIS training programs',
-          'Technical support services',
-          'Knowledge transfer',
-          'System administration support'
-        ],
-        image: 'https://images.pexels.com/photos/6321573/pexels-photo-6321573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      }
-    ]
-  };
+const allServices = [
+  {
+    categoryId: 'gis',
+    title: 'GIS Mapping',
+    icon: <Globe className="w-6 h-6 text-blue-600" />,
+    description: 'Our Core GIS Services focus on the collection, analysis, and visualization of spatial data using advanced geospatial technologies. We specialize in GIS consultation, digital mapping, urban planning, land management, and government initiatives like SVAMITVA and Smart City projects.',
+    image: gis1,
+    path: '/services/gis',
+  },
+  {
+    categoryId: 'gis',
+    title: 'Spatial Data Collection & Integration',
+    icon: <MapPin className="w-6 h-6 text-blue-600" />,
+    description: 'Accurate data is the foundation of GIS. We specialize in collecting, digitizing, and integrating geospatial data from diverse sources including field surveys, drone imagery, and legacy records.',
+    image: gis2,
+    path: '/services/gis',
+  },
+  {
+    categoryId: 'gis',
+    title: 'GIS Application Development & Analysis',
+    icon: <Users2 className="w-6 h-6 text-blue-600" />,
+    description: 'Our team develops custom GIS tools and platforms for spatial data management, analysis, and visualization, enabling clients to extract insights and automate workflows.',
+    image: gis3,
+    path: '/services/gis',
+  },
+  {
+    categoryId: 'gis',
+    title: 'Surveying & Land Records Management',
+    icon: <Shield className="w-6 h-6 text-blue-600" />,
+    description: 'We provide end-to-end land surveying and records management services for urban and rural areas. These services support property ownership clarity, boundary demarcation, and legal documentation.',
+    image: gis4,
+    path: '/services/gis',
+  },
+  {
+    categoryId: 'surveying',
+    title: 'Topographical & Geotechnical Surveys',
+    icon: <Layers className="w-6 h-6 text-blue-600" />,
+    description: 'We conduct topographical and geotechnical surveys to map land features and analyze soil conditions, supporting safe and effective planning for construction, infrastructure, and development projects.',
+    image: surveying1,
+    path: '/services/surveying',
+  },
+  {
+    categoryId: 'surveying',
+    title: 'Drone Surveying',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'We offer drone surveying services to capture high-resolution aerial data for accurate mapping, terrain modeling, and large-area assessments, enabling faster and more efficient project planning.',
+    image: surveying2,
+    path: '/services/surveying',
+  },
+  {
+    categoryId: 'surveying',
+    title: 'DGPS & Total Station Surveying',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'We use Differential GPS and Total Station tools to deliver precise ground-level spatial data for land development, layout planning, and engineering projects.',
+    image: surveying3,
+    path: '/services/surveying',
+  },
+  {
+    categoryId: 'surveying',
+    title: 'GIS-Based Mapping & Integration',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'We develop detailed GIS maps with layered data to support spatial analysis, planning, and decision-making across urban, rural, and industrial applications.',
+    image: surveying4,
+    path: '/services/surveying',
+  },
+  {
+    categoryId: 'property',
+    title: 'Door-to-Door Property Survey',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'We conduct door-to-door property surveys to collect accurate data on ownership, property usage, structure, and utilities. This ensures reliable information for tax assessment, urban planning, and municipal record updates.',
+    image: property1,
+    path: '/services/propertytax',
+  },
+  {
+    categoryId: 'property',
+    title: 'Online Tax Assessment System',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'Our Online Tax Assessment System streamlines property tax calculation, billing, and management through a centralized digital platform, enabling real-time assessments, self-service options, and improved transparency for both citizens and municipalities.',
+    image: property2,
+    path: '/services/propertytax',
+  },
+  {
+    categoryId: 'property',
+    title: 'Grievance Redressal & Public Notification',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'A transparent process to handle objections, hearings, and public notices during the tax assessment lifecycle.',
+    image: property3,
+    path: '/services/propertytax',
+  },
+  {
+    categoryId: 'property',
+    title: 'Post-Assessment Monitoring & Maintenance',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'Continuous updating and maintenance of property records to reflect structural changes, ownership transfer, and new constructions.',
+    image: property4,
+    path: '/services/propertytax',
+  },
+  {
+    categoryId: 'underground',
+    title: 'Groundwater Quality Testing',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'This service focuses on evaluating the chemical, physical, and biological characteristics of underground water to determine its suitability for drinking, irrigation, and industrial use.',
+    image: ug1,
+    path: '/services/undergroundwater',
+  },
+  {
+    categoryId: 'underground',
+    title: 'Hydrogeological Survey',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'A scientific study of underground water conditions, aquifer characteristics, and water table levels to support sustainable groundwater use and recharge planning.',
+    image: ug2,
+    path: '/services/undergroundwater',
+  },
+  {
+    categoryId: 'underground',
+    title: 'Groundwater Recharge Assessment',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'Evaluation of recharge capacity, surface infiltration, and aquifer replenishment potential to support water conservation and rainwater harvesting planning.',
+    image: ug3,
+    path: '/services/undergroundwater',
+  },
+  {
+    categoryId: 'underground',
+    title: 'Periodic Monitoring & Reporting',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'Ongoing groundwater testing and reporting to monitor changes in quality, quantity, and seasonal trends for regulatory or operational purposes.',
+    image: ug4,
+    path: '/services/undergroundwater',
+  },
+  {
+    categoryId: 'surface',
+    title: 'Surface Water Quality Testing',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'Comprehensive testing of lakes, rivers, reservoirs, and ponds to assess their chemical, physical, and biological properties.',
+    image: sw1,
+    path: '/services/surfacewater',
+  },
+  {
+    categoryId: 'surface',
+    title: 'Pollution Source Identification',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'Assessment of potential pollution contributors to surface water bodies such as industrial discharge, sewage, and runoff.',
+    image: sw2,
+    path: '/services/surfacewater',
+  },
+  {
+    categoryId: 'surface',
+    title: 'Surface Water Mapping & Monitoring',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'Mapping and periodic monitoring of surface water bodies using GIS tools and field surveys for resource management and conservation.',
+    image: sw3,
+    path: '/services/surfacewater',
+  },
+  {
+    categoryId: 'surface',
+    title: 'Water Resource Impact Assessment',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'Evaluation of how developmental or industrial activities affect nearby surface water resources.',
+    image: sw4,
+    path: '/services/surfacewater',
+  },
+  {
+    categoryId: 'manpower',
+    title: 'Skilled Manpower Supply',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'We offer technically qualified and experienced professionals across various domains, including GIS, engineering, IT, and surveying. Our skilled manpower ensures efficiency, accuracy, and reliability for both field and office-based projects.',
+    image: manpower1,
+    path: '/services/manpower',
+  },
+  {
+    categoryId: 'manpower',
+    title: 'Unskilled & General Labor Supply',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'We provide dependable unskilled and general labor for support tasks across fieldwork, construction, and municipal projects. Our workforce is adaptable, task-ready, and available for both short-term and long-term assignments.',
+    image: manpower2,
+    path: '/services/manpower',
+  },
+  {
+    categoryId: 'manpower',
+    title: 'Government & Institutional Staffing',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'We offer staffing solutions for government departments and public institutions, providing trained personnel such as stenographers, data entry operators, and administrative staff. Our services ensure compliance with regulatory standards and seamless integration into public sector workflows.',
+    image: manpower3,
+    path: '/services/manpower',
+  },
+  {
+    categoryId: 'manpower',
+    title: 'Project-Based Staffing Solutions',
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    description: 'We provide flexible, project-specific staffing solutions tailored to the scope, duration, and skill requirements of each assignment. Whether for GIS, surveying, or administrative projects, our workforce is deployed efficiently to meet deadlines and ensure smooth project execution.',
+    image: manpower4,
+    path: '/services/manpower',
+  },
+];
 
-  const industries = [
-    { name: 'Urban Planning', icon: <Building className="w-8 h-8" />, description: 'Smart city planning and development' },
-    { name: 'Environmental', icon: <Globe className="w-8 h-8" />, description: 'Environmental monitoring and conservation' },
-    { name: 'Utilities', icon: <Cloud className="w-8 h-8" />, description: 'Infrastructure and network management' },
-    { name: 'Transportation', icon: <Map className="w-8 h-8" />, description: 'Route optimization and fleet management' },
-    { name: 'Agriculture', icon: <Database className="w-8 h-8" />, description: 'Precision farming and crop management' },
-    { name: 'Oil & Gas', icon: <BarChart3 className="w-8 h-8" />, description: 'Resource exploration and management' }
-  ];
+  const Services = () => {
+  const [activeTab, setActiveTab] = useState('gis');
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5 }
-    }
-  };
-
-  const ServiceCard = ({ service, index }: { service: any; index: number }) => {
-    const isEven = index % 2 === 0;
-    
-    return (
-      <motion.div 
-        className={`bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl
-        `}
-        variants={itemVariants}
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Image Section */}
-          <div className={`relative h-64 lg:h-full ${!isEven ? 'lg:order-2' : ''}`}>
-            <img 
-              src={service.image} 
-              alt={service.title} 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            <div className="absolute bottom-4 left-4 flex items-center">
-              <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
-                {service.icon}
-              </div>
-            </div>
-          </div>
-          
-          {/* Content Section */}
-          <div className="p-8">
-            <div className="flex justify-between items-start mb-4">
-              <h3 className="text-2xl font-bold text-slate-800">{service.title}</h3>
-
-            </div>
-            
-            <p className="text-slate-600 mb-6">{service.description}</p>
-            
-            <motion.div 
-
-              className="overflow-hidden"
-            >
-              <div className="bg-slate-50 rounded-lg p-6 mb-6">
-                <h4 className="font-medium text-slate-800 mb-4">Key Features:</h4>
-                <ul className="grid grid-cols-1 gap-3">
-                  {service.features.map((feature: string, idx: number) => (
-                    <li key={idx} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </motion.div>
-    );
-  };
+  const filteredServices = allServices.filter(service => service.categoryId === activeTab);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.4 }}
-    >
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-slate-900 to-blue-900 text-white pt-32 pb-20 h-[476px]">
-        <div className="absolute inset-0 opacity-60">
-          <img 
-            src="https://img.freepik.com/free-photo/still-life-business-roles-with-various-mechanism-pieces_23-2149352652.jpg" 
-            alt="Services Background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-blue-400 opacity-70"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl">
-            <motion.h1 
-              className="text-4xl md:text-5xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Our Services
-            </motion.h1>
-            <motion.p 
-              className="text-xl text-blue-100"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Comprehensive GIS solutions and manpower services tailored to your specific needs.
-            </motion.p>
-          </div>
-        </div>
-      </section>
+    <section className="min-h-screen py-20 px-4 bg-slate-50">
+      <div className="max-w-6xl mx-auto text-center mt-12 mb-12">
+        <h2 className="text-4xl font-bold text-slate-800 mb-4">Our Services</h2>
+        <p className="text-slate-600 text-lg">Explore our diverse offerings tailored to government and private clients.</p>
+      </div>
 
-      {/* Services Listing */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div 
-            className="grid grid-cols-1 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-          </motion.div>
+      <div className="max-w-5xl mx-auto">
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {serviceCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveTab(category.id)}
+              className={`px-5 py-2 rounded-full border transition font-medium text-sm
+                ${activeTab === category.id
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-100'}`}
+            >
+              {category.name}
+            </button>
+          ))}
         </div>
-      </section>
 
-      {/* Industry Applications */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <motion.h2 
-              className="text-3xl font-bold mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              Industry Applications
-            </motion.h2>
-            <motion.p 
-              className="text-lg text-blue-100 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Our GIS and manpower services are applied across diverse industries to solve complex challenges.
-            </motion.p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <motion.div 
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-colors"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="bg-blue-600/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  {industry.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3">{industry.name}</h3>
-                <p className="text-blue-100">
-                  {industry.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+        {/* Service Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {filteredServices.map((service) => (
+            <div key={service.id} className="bg-white rounded-xl shadow-md overflow-hidden">
+              <img src={service.image} alt={service.title} className="w-full h-48 object-cover" />
+              <div className="p-6 flex flex-col items-center justify-center">
+                <h3 className="text-xl font-bold text-slate-800 mb-2">{service.title}</h3>
+                <p className="text-slate-600 text-sm mb-4">{service.description}</p>
+                <Link to={service.path} className="inline-flex items-center bg-blue-600 text-white py-2 px-6 rounded-md font-medium hover:bg-blue-700 transition-colors">Explore More</Link>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
-    </motion.div>
+      </div>
+    </section>
   );
 };
 

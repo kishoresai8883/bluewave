@@ -21,6 +21,7 @@ import Careers from './pages/careers'
 
 // Scroll to top on page change
 import ScrollToTop from './components/utils/ScrollToTop';
+import Services from './pages/Services';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path='/services' element={<Services/>}/>
               <Route path="/services/gis" element={<GisServices />}/>
               <Route path="/services/manpower" element={<ManpowerServices/>}/>
               <Route path="/services/propertytax" element={<PropertyTaxServices/>}/>

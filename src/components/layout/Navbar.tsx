@@ -95,13 +95,13 @@ return (
                 onMouseLeave={handleMouseLeave}
               >
                 <div className="flex items-center cursor-pointer">
-                  <HashLink to="/#service">
+                  <NavLink to="/services">
                     <span className={`text-lg font-medium transition-colors ${
                     scrolled ? 'text-slate-700 hover:text-blue-600' : 'text-slate-700 hover:text-blue-600'
                   }`}>
                     Services
                   </span>
-                  </HashLink>
+                  </NavLink>
                   
                   <ChevronDown className={`w-4 h-4 ml-1 ${
                     scrolled ? 'text-slate-700' : 'text-slate-700'
