@@ -63,7 +63,7 @@ const navLinks = [
 
 return (
   <header 
-    className={`fixed w-full lg:px-12 top-0 z-50 transition-all duration-300 ${
+    className={`fixed w-full lg:px-12 top-[32px] z-50 transition-all shadow-sm duration-300 ${
       scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-white py-2'
     }`}
   >
@@ -80,9 +80,6 @@ return (
             </span>
           </div>
         </NavLink>
-        <div className='flex items-center justify-center hidden lg:block'>
-          <h2 className='border-b-2 animate-pulse logo-name-regular text-lg text-black'>The Solutions of Real-World Problems</h2>
-        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -167,13 +164,13 @@ return (
         <div key={link.name} className="w-full">
           {link.dropdown ? (
             <>
-              <HashLink to="/#service"
+              <NavLink to="/services"
                 className="flex justify-between items-center w-full py-3 px-4 text-sm font-medium text-slate-700"
                 onClick={() => setServicesOpen(!servicesOpen)}
               >
                 Services
                 <ChevronDown className={`w-4 h-4 transform transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-              </HashLink>
+              </NavLink>
               {servicesOpen && (
                 <div className="pl-6">
                   {link.dropdown.map((item) => (

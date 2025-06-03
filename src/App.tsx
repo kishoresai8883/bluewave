@@ -22,12 +22,14 @@ import Careers from './pages/careers'
 // Scroll to top on page change
 import ScrollToTop from './components/utils/ScrollToTop';
 import Services from './pages/Services';
+import SloganBar from './components/layout/slogan';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
+        <SloganBar/>
         <Navbar />
         <main className="flex-grow">
           <AnimatePresence mode="wait">
