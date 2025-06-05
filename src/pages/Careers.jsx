@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 
 const Careers = () => {
   const [status, setStatus] = useState('idle'); // ✅ Correct for .jsx
@@ -110,7 +110,7 @@ const [loading, setLoading] = useState(false);
               accept=".pdf,.doc,.docx"
               className="mt-1 block w-full text-slate-700"
             />
-          </div> */}
+          </div> *
 
           <div className="text-center">
             <button
@@ -126,5 +126,23 @@ const [loading, setLoading] = useState(false);
     </section>
   );
 };
+
+export default Careers;
+*/
+
+import FormfacadeEmbed from "@formfacade/embed-react";
+import { div } from "framer-motion/client";
+
+const Careers = () => {
+  return (
+    <div className="min-h-screen bg-slate-50 py-36 px-4 sm:px-6 lg:px-8">
+    <FormfacadeEmbed
+      formFacadeURL="https://formfacade.com/include/100831857621277081987/form/1FAIpQLSe0svQb8Gaw2OfUUF9y6H94zwcFiIN6RAhfRaWzW0W1E0foPg/classic.js/?div=ff-compose"
+      onSubmitForm={() => console.log('Form submitted')}
+    />
+    </div>
+    
+  )
+}
 
 export default Careers;

@@ -63,23 +63,27 @@ const navLinks = [
 
 return (
   <header 
-    className={`fixed w-full lg:px-12 top-[32px] z-50 transition-all shadow-sm duration-300 ${
+    className={`fixed w-full lg:px-12 top-0 z-50 transition-all shadow-sm duration-300 ${
       scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' : 'bg-white py-2'
     }`}
   >
     <div className="container mx-auto px-4 md:px-6">
       <div className="flex justify-between items-center">
-        <NavLink to="/" className="flex items-center">
+        <div className='flex flex-col'>
+          <NavLink to="/" className="flex items-center">
           <img src={logo} alt="logo" className={`w-14 h-14 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
           <div className="flex flex-col">
-            <span className={`text-xl logo-name-bold ${scrolled ? 'text-blue-900' : 'text-blue-900'} transition-colors`}>
+            <span className={`text-xl lg:text-2xl logo-name-bold ${scrolled ? 'text-blue-900' : 'text-blue-900'} transition-colors`}>
               BLUEWAVE
             </span>
-            <span className={`hidden lg:block text-md logo-name-bold ${scrolled ? 'text-slate-800' : 'text-black'} transition-colors`}>
+            <span className={`text-sm md:text-md lg:text-lg logo-name-bold ${scrolled ? 'text-slate-800' : 'text-black'} transition-colors`}>
               GIS & Manpower Solutions Pvt Ltd
             </span>
           </div>
         </NavLink>
+          <p className='text-center flex-shrink-0 text-md md:text-md font-semibold'>The Solutions of all Real-World Problems</p>
+        </div>
+        
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">

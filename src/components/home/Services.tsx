@@ -30,7 +30,7 @@ const ServicesSection = () => {
     {
       id: 3,
       icon: <Globe className="w-10 h-10 text-blue-600" />,
-      title: 'Groundwater Quality Testing',
+      title: 'Ground Water Analysis',
       description: 'The quality of groundwater can affect not only our health also society and economy.',
       image: img2,
       link: '/services/groundwater'
@@ -108,9 +108,9 @@ const ServicesSection = () => {
               <div className="w-full h-44 flex rounded-t-lg overflow-hidden items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
                 <img src={service.image} className='w-full h-full object-cover' alt="service" />
               </div>
-              <div className="px-8 py-3 flex flex-col flex-grow justify-between">
+              <div className="px-8 py-3 flex flex-col items-center flex-grow justify-between">
                 <h3 className="text-xl font-bold text-slate-800 mb-3">{service.title}</h3>
-                <p className="text-slate-600 mb-4">{service.description}</p>
+                <p className="text-slate-600 text-center mb-4">{service.description}</p>
               </div>
               <div className='pb-6 flex justify-center'>
                 <Link 

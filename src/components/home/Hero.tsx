@@ -100,7 +100,7 @@ const carouselSlides = [
   },
   {
     image: "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    title: "bluewave is a Leading GIS Surveying & Manpower services",
+    title: "Bluewave is a Leading GIS Surveying & Manpower services",
     description: "We provide skilled, unskilled, and professional workforce tailored to project needs across diverse sectors.",
     buttons: [
       { label: "Get Started", link: "/contact", primary: true },
@@ -202,29 +202,29 @@ const Hero = () => {
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-2 rounded-full backdrop-blur-sm text-white z-20 transition-all"
         onClick={() => paginate(-1)}
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-4 h-4" />
       </button>
       <button
         className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-2 rounded-full backdrop-blur-sm text-white z-20 transition-all"
         onClick={() => paginate(1)}
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-4 h-4" />
       </button>
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         <div className="flex-1 flex items-center">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="container mx-auto px-4 py-8 md:py-24">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-6xl mx-auto text-center text-white"
+              className="max-w-7xl mx-auto text-center text-white"
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                 {currentSlide.title}
               </h1>
-              <p className="text-center text-lg md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-center text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
                 {currentSlide.description}
               </p>
               <div className="flex justify-center gap-4 flex-wrap">
@@ -241,8 +241,8 @@ const Hero = () => {
                 {btn.label}
                 {btn.primary && <ArrowRight className="ml-2" />}
               </Link>
-          ))}
-      </div>
+            ))}
+          </div>
             </motion.div>
           </div>
         </div>
