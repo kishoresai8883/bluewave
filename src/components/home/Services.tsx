@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Map, Users, Database, LineChart, Globe, BarChart3, ArrowRight } from 'lucide-react';
 import img from '../../assets/service.jpg'
 import img1 from '../../assets/service1.jpeg'
-import img2 from '../../assets/service2.webp'
+import img2 from '../../assets/gallery-img16.jpg'
 import img3 from '../../assets/service5.jpg'
 import img4 from '../../assets/service3.jpeg'
 import img5 from '../../assets/service4.jpg'

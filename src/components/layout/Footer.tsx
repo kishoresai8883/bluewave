@@ -23,10 +23,10 @@ const Footer = () => {
               <img src={logo} alt="logo"  className="w-12 h-12 text-blue-500 mr-2" />
               <div className='flex flex-col'>
                 <span className="text-lg font-bold logo-name-bold">BLUEWAVE</span>
-                <span className={`text-sm logo-name-bold  transition-colors`}>GIS & Manpower Solutions Pvt Ltd</span>
+                <span className={`text-sm logo-name-bold text-md transition-colors`}>GIS & Manpower Solutions Pvt Ltd</span>
               </div>
             </NavLink>
-            <p className='text-center flex-shrink-0 text-sm md:text-md font-semibold mb-4'>The Solutions of all Real-World Problems</p>
+            <p className='slogan text-left md:text-center ml-6 flex-shrink-0 text-sm md:text-md font-bold mb-4'>The Solutions of all Real-World Problems</p>
             <p className="text-slate-300 mb-4">
               Leading provider of innovative GIS solutions and expert manpower services, delivering excellence since 2015.
             </p>

@@ -76,17 +76,17 @@ return (
             <span className={`text-xl lg:text-2xl logo-name-bold ${scrolled ? 'text-blue-900' : 'text-blue-900'} transition-colors`}>
               BLUEWAVE
             </span>
-            <span className={`text-sm md:text-md lg:text-lg logo-name-bold ${scrolled ? 'text-slate-800' : 'text-black'} transition-colors`}>
+            <span className={`text-md md:text-lg lg:text-xl logo-name-bold ${scrolled ? 'text-slate-800' : 'text-black'} transition-colors`}>
               GIS & Manpower Solutions Pvt Ltd
             </span>
           </div>
         </NavLink>
-          <p className='text-center flex-shrink-0 text-md md:text-md font-semibold'>The Solutions of all Real-World Problems</p>
+          <p className='slogan text-center flex-shrink-0 text-md md:text-md font-bold'>The Solutions of all Real-World Problems</p>
         </div>
         
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-8 flex-wrap">
           {navLinks.map((link) => (
             <div key={link.name} className="relative group">
               {link.dropdown ? (

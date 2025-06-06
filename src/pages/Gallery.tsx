@@ -8,6 +8,9 @@ import img2 from '../assets/gallery-img5.jpg';
 import img3 from '../assets/gallery-img12.jpg';
 import img4 from '../assets/gallery-img13.jpg';
 import img5 from '../assets/gallery-img14.jpg';
+import img6 from '../assets/gallery-img15.jpg';
+import img7 from '../assets/gallery-img16.jpg';
+import img8 from '../assets/DRONE_IMAGE.jpg';
 
 const Gallery = () => {
   const [filter, setFilter] = useState('all');
@@ -59,6 +62,27 @@ const Gallery = () => {
     {
       id: 6,
       src: img,
+      title: 'Field Data Collection',
+      category: 'field-work',
+      description: 'On-site data collection for accurate geographic information.'
+    },
+    {
+      id: 7,
+      src: img6,
+      title: 'Field Data Collection',
+      category: 'field-work',
+      description: 'On-site data collection for accurate geographic information.'
+    },
+    {
+      id: 8,
+      src: img7,
+      title: 'Field Data Collection',
+      category: 'field-work',
+      description: 'On-site data collection for accurate geographic information.'
+    },
+    {
+      id: 9,
+      src: img8,
       title: 'Field Data Collection',
       category: 'field-work',
       description: 'On-site data collection for accurate geographic information.'
@@ -128,8 +152,6 @@ const Gallery = () => {
           </div>
         </div>
       </section>
-
-
 
       {/* Gallery */}
       <section className="py-16 lg:px-20">
