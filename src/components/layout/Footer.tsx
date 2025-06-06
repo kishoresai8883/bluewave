@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/bluewave-logo.png';
+import logo from '../../assets/bluewave-logo.webp';
 import '../../index.css';
 import { 
   MapPin, 

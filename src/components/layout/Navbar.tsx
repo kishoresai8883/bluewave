@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { HashLink } from 'react-router-hash-link'
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import logo from '../../assets/bluewave-logo.png';
+import logo from '../../assets/bluewave-logo.webp';
 import '../../index.css'
 
 const Navbar = () => {

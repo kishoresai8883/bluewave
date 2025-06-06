@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Award, Users, Globe, BarChart3, Building } from 'lucide-react';
-import img1 from '../assets/bluewave-team-img1.png';
-import img2 from '../assets/bluewave-team-img2.png';
-import img3 from '../assets/bluewave-team-img3.png';
-import img4 from '../assets/bluewave-team-img4.png';
+import img1 from '../assets/bluewave-team-img1.webp';
+import img2 from '../assets/bluewave-team-img2.webp';
+import img3 from '../assets/bluewave-team-img3.webp';
+import img4 from '../assets/bluewave-team-img4.webp';
 
 const About = () => {
   const stats = [

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageSquare } from 'lucide-react';
-import bgimg from '../../assets/BG-8.jpg';
+import bgimg from '../../assets/BG-8.webp';
 
 const CTA = () => {
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
-import img from '../assets/surfacewater.jpg';
+import { Map, Database, Satellite, Layers, CheckCircle } from 'lucide-react';
+import img from '../assets/surfacewater.webp';
 import img1 from './../assets/surfacewater-img.webp'
-import img2 from './../assets/surfacewater-img1.jpg'
+import img2 from './../assets/surfacewater-img1.webp'
 import img3 from './../assets/surfacewater-img2.webp'
 import img4 from './../assets/surfacewater-img3.webp'
 

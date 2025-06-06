@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-import img from '../../assets/bw-img2.jpg'
+import img from '../../assets/bw-img2.webp'
 
 const AboutSection = () => {
   const features = [
@@ -57,9 +57,9 @@ const AboutSection = () => {
               About <span className="text-orange-400 logo-name-bold">Bluewave</span>
             </h2>
             <p className="text-lg text-slate-600 mb-6">
-            We are a leading provider of GIS consultation, surveying services, and manpower solutions. Our in-house capabilities cover the full spectrum of GIS work, delivered by a dedicated team committed to achieving excellence and meeting project goals with precision.
-With extensive experience in the GIS domain, we excel in offering both skilled and unskilled manpower, as well as qualified professionals across various management levels. Our strength lies in understanding organizational needs and delivering candidates with the right skills and relevant experience.
-Our mission is to recruit responsible, capable individuals aligned with the specific requirements of each vacancy and organization we serve.</p> 
+              We are a leading provider of GIS consultation, surveying services, and manpower solutions. Our in-house capabilities cover the full spectrum of GIS work, delivered by a dedicated team committed to achieving excellence and meeting project goals with precision.
+              With extensive experience in the GIS domain, we excel in offering both skilled and unskilled manpower, as well as qualified professionals across various management levels. Our strength lies in understanding organizational needs and delivering candidates with the right skills and relevant experience.
+              Our mission is to recruit responsible, capable individuals aligned with the specific requirements of each vacancy and organization we serve.</p> 
             <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-3">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start">

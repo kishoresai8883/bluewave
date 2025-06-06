@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
-import img from '../assets/underground.jpg';
-import img1 from './../assets/water-img.jpg'
-import img2 from './../assets/water-img1.jpg'
-import img3 from './../assets/water-img2.png'
-import img4 from './../assets/water-img3.jpg'
+import { Map, Database, Satellite, Layers, CheckCircle } from 'lucide-react';
+import img from '../assets/underground.webp';
+import img1 from './../assets/water-img.webp'
+import img2 from './../assets/water-img1.webp'
+import img3 from './../assets/water-img2.webp'
+import img4 from './../assets/water-img3.webp'
 
 const services = [
   {

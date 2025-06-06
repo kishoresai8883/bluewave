@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, X } from 'lucide-react';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import gallery from '../assets/gallery-img.webp';
-import img from '../assets/gallery-img9.jpg';
-import img1 from '../assets/gallery-img10.jpg';
-import img2 from '../assets/gallery-img5.jpg';
-import img3 from '../assets/gallery-img12.jpg';
-import img4 from '../assets/gallery-img13.jpg';
-import img5 from '../assets/gallery-img14.jpg';
-import img6 from '../assets/gallery-img15.jpg';
-import img7 from '../assets/gallery-img16.jpg';
-import img8 from '../assets/DRONE_IMAGE.jpg';
+import img from '../assets/gallery-img9.webp';
+import img1 from '../assets/gallery-img10.webp';
+import img2 from '../assets/gallery-img5.webp';
+import img3 from '../assets/gallery-img12.webp';
+import img4 from '../assets/gallery-img13.webp';
+import img5 from '../assets/gallery-img14.webp';
+import img6 from '../assets/gallery-img15.webp';
+import img7 from '../assets/gallery-img16.webp';
+import img8 from '../assets/DRONE_IMAGE.webp';
 
 const Gallery = () => {
   const [filter, setFilter] = useState('all');
@@ -181,13 +180,6 @@ const Gallery = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  {/* <div className="p-4">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold text-slate-800">Photo Gallery</h3>
-                    </div>
-                    <p className="text-slate-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  </div> */}
-                  
                 </motion.div>
               ))}
             </motion.div>

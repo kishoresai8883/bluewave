@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
 import img from '../assets/manpower.webp';
-import img1 from './../assets/img4.jpg'
-import img2 from './../assets/img5.jpg'
-import img3 from './../assets/img6.jpg'
-import img4 from './../assets/img7.jpeg'
+import img1 from './../assets/img4.webp'
+import img2 from './../assets/img5.webp'
+import img3 from './../assets/img6.webp'
+import img4 from './../assets/img7.webp'
 
 const services = [
   {

@@ -1,31 +1,31 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { MapPin, Globe, Users2, Shield, Layers, Wrench } from 'lucide-react';
-import gis1 from '../assets/img1.jpeg';
-import gis2 from '../assets/img2.jpg';
-import gis3 from '../assets/img3.jpg';
-import gis4 from '../assets/gallery-img8.jpg';
-import surveying1 from './../assets/gallery-img6.png'
-import surveying2 from './../assets/img8.jpg'
-import surveying3 from './../assets/gallery-img12.jpg'
-import surveying4 from './../assets/img9.png'
-import property1 from './../assets/gallery-img4.png'
-import property2 from './../assets/img10.jpeg'
-import property3 from './../assets/gallery-img9.jpg'
-import property4 from './../assets/img12.png'
-import ug1 from './../assets/water-img.jpg'
-import ug2 from './../assets/water-img1.jpg'
-import ug3 from './../assets/water-img2.png'
-import ug4 from './../assets/water-img3.jpg'
+import gis1 from '../assets/img1.webp';
+import gis2 from '../assets/img2.webp';
+import gis3 from '../assets/img3.webp';
+import gis4 from '../assets/gallery-img8.webp';
+import surveying1 from './../assets/gallery-img6.webp'
+import surveying2 from './../assets/img8.webp'
+import surveying3 from './../assets/gallery-img12.webp'
+import surveying4 from './../assets/img9.webp'
+import property1 from './../assets/gallery-img4.webp'
+import property2 from './../assets/img10.webp'
+import property3 from './../assets/gallery-img9.webp'
+import property4 from './../assets/img12.webp'
+import ug1 from './../assets/water-img.webp'
+import ug2 from './../assets/water-img1.webp'
+import ug3 from './../assets/water-img2.webp'
+import ug4 from './../assets/water-img3.webp'
 import sw1 from './../assets/surfacewater-img.webp'
-import sw2 from './../assets/surfacewater-img1.jpg'
+import sw2 from './../assets/surfacewater-img1.webp'
 import sw3 from './../assets/surfacewater-img2.webp'
 import sw4 from './../assets/surfacewater-img3.webp'
-import manpower1 from './../assets/img4.jpg'
-import manpower2 from './../assets/img5.jpg'
-import manpower3 from './../assets/img6.jpg'
-import manpower4 from './../assets/img7.jpeg'
+import manpower1 from './../assets/img4.webp'
+import manpower2 from './../assets/img5.webp'
+import manpower3 from './../assets/img6.webp'
+import manpower4 from './../assets/img7.webp'
 
 const serviceCategories = [
   { id: 'gis', name: 'GIS & Geospatial', icon: <Globe className="w-6 h-6 text-blue-600" /> },
@@ -246,33 +246,33 @@ const allServices = [
       <div className="max-w-5xl mx-auto">
         {/* Tabs */}
         <div className="relative flex flex-wrap justify-center gap-4 mb-12">
-    {serviceCategories.map((category) => {
-      const isActive = activeTab === category.id;
+          {serviceCategories.map((category) => {
+          const isActive = activeTab === category.id;
 
-      return (
-        <motion.button
-          key={category.id}
-          onClick={() => setActiveTab(category.id)}
-          className={`relative px-6 py-2 rounded-full font-bold text-sm transition-all duration-300
-            ${isActive
-              ? 'text-white bg-blue-600 shadow-md scale-105'
-              : 'text-slate-700 bg-white border border-orange-400 hover:bg-blue-50'
-            }`}
-          whileTap={{ scale: 0.95 }}
-          whileHover={!isActive ? { scale: 1.05 } : {}}
-        >
-          {category.name}
-          {isActive && (
-            <motion.div
-              layoutId="underline"
-              className="absolute inset-0 z-[-1] bg-blue-600 rounded-full"
-              transition={{ type: "spring", stiffness: 400, damping: 30 }}
-            />
-          )}
-        </motion.button>
-      );
-    })}
-  </div>
+          return (
+            <motion.button
+              key={category.id}
+              onClick={() => setActiveTab(category.id)}
+              className={`relative px-6 py-2 rounded-full font-bold text-sm transition-all duration-300
+                ${isActive
+                  ? 'text-white bg-blue-600 shadow-md scale-105'
+                  : 'text-slate-700 bg-white border border-orange-400 hover:bg-blue-50'
+                }`}
+              whileTap={{ scale: 0.95 }}
+              whileHover={!isActive ? { scale: 1.05 } : {}}
+            >
+              {category.name}
+              {isActive && (
+                <motion.div
+                  layoutId="underline"
+                  className="absolute inset-0 z-[-1] bg-blue-600 rounded-full"
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                />
+              )}
+            </motion.button>
+          );
+          })}
+        </div>
 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">

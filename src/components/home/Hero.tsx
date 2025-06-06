@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Globe2, Users2, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
-import img from '../../assets/DRONE_IMAGE.jpg'
+import img from '../../assets/DRONE_IMAGE.webp'
 
 const carouselSlides = [
   {

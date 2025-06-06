@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, X } from 'lucide-react';
-import img1 from '../../assets/gallery-img1.png'
-import img2 from '../../assets/gallery-img2.png'
-import img3 from '../../assets/gallery-img3.jpg'
-import img4 from '../../assets/gallery-img4.png'  
-import img5 from '../../assets/gallery-img5.jpg'
-import img6 from '../../assets/gallery-img6.png'
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import img1 from '../../assets/gallery-img1.webp'
+import img2 from '../../assets/gallery-img2.webp'
+import img3 from '../../assets/gallery-img3.webp'
+import img4 from '../../assets/gallery-img4.webp'  
+import img5 from '../../assets/gallery-img5.webp'
+import img6 from '../../assets/gallery-img6.webp'
 
 const Gallery = () => {
   const [filter, setFilter] = useState('all');

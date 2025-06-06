@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Map, Database, Satellite, Layers, Cloud, CheckCircle } from 'lucide-react';
-import img from '../assets/propertytax.jpg';
-import img1 from './../assets/gallery-img4.png'
-import img2 from './../assets/img10.jpeg'
-import img3 from './../assets/gallery-img9.jpg'
-import img4 from './../assets/img12.png'
+import { Map, Database, Satellite, Layers, CheckCircle } from 'lucide-react';
+import img from '../assets/propertytax.webp';
+import img1 from './../assets/gallery-img4.webp'
+import img2 from './../assets/img10.webp'
+import img3 from './../assets/gallery-img9.webp'
+import img4 from './../assets/img12.webp'
 
 const services = [
   {
@@ -74,26 +74,25 @@ const PropertyTaxServices = () => {
       transition={{ duration: 0.4 }}
       className="relative bg-slate-500 text-white lg:px-20 pt-32 pb-20 h-[476px] w-full"
     >
-        <div className="absolute inset-0 opacity-80">
-          <img 
-            src={img} 
-            alt="About Us Background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-slate-800 opacity-80"></div>
+      <div className="absolute inset-0 opacity-80">
+        <img 
+          src={img} 
+          alt="About Us Background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-800 opacity-80"></div>
+      </div> 
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Property Tax Assessment Services</h1>
+          <p className="text-xl text-white">
+          We are the Leading provider of GIS Consultation, Surveying Service
+          Company, also provides Manpower services..
+          </p>
         </div>
-        
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Property Tax Assessment Services</h1>
-            <p className="text-xl text-white">
-            We are the Leading provider of GIS Consultation, Surveying Service
-            Company, also provides Manpower services..
-            </p>
-          </div>
-        </div>
+      </div>
     </motion.section>
-      <motion.div className="px-6 py-12 mx-auto max-w-7xl">
+    <motion.div className="px-6 py-12 mx-auto max-w-7xl">
       <h1 className="text-4xl font-bold text-blue-700 mb-10 text-center">Our Services</h1>
       <div className="space-y-12">
         {services.map((service, index) => {
