@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Globe, Users2, Shield, Layers, Wrench } from 'lucide-react';
 import gis1 from '../assets/img1.jpeg';
 import gis2 from '../assets/img2.jpg';
@@ -244,20 +245,34 @@ const allServices = [
 
       <div className="max-w-5xl mx-auto">
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {serviceCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveTab(category.id)}
-              className={`px-5 py-2 rounded-full border transition font-bold text-sm
-                ${activeTab === category.id
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-100'}`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
+        <div className="relative flex flex-wrap justify-center gap-4 mb-12">
+    {serviceCategories.map((category) => {
+      const isActive = activeTab === category.id;
+
+      return (
+        <motion.button
+          key={category.id}
+          onClick={() => setActiveTab(category.id)}
+          className={`relative px-6 py-2 rounded-full font-bold text-sm transition-all duration-300
+            ${isActive
+              ? 'text-white bg-blue-600 shadow-md scale-105'
+              : 'text-slate-700 bg-white border border-orange-400 hover:bg-blue-50'
+            }`}
+          whileTap={{ scale: 0.95 }}
+          whileHover={!isActive ? { scale: 1.05 } : {}}
+        >
+          {category.name}
+          {isActive && (
+            <motion.div
+              layoutId="underline"
+              className="absolute inset-0 z-[-1] bg-blue-600 rounded-full"
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            />
+          )}
+        </motion.button>
+      );
+    })}
+  </div>
 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
