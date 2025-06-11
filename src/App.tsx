@@ -17,7 +17,7 @@ import UndergroundWater from './pages/UndergroundWater';
 import SurfaceWater from './pages/SurfaceWater';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
-import Careers from './pages/careers'
+import Careers from './pages/Careers'
 
 // Scroll to top on page change
 import ScrollToTop from './components/utils/ScrollToTop';
