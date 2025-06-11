@@ -70,7 +70,7 @@ return (
       <div className="flex justify-between items-center">
         <div className='flex flex-col'>
           <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="logo" className={`w-14 h-14 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
+          <img src={logo} alt="logo" className={`w-12 h-12 lg:w-14 lg:h-14 ${scrolled ? 'text-blue-600' : 'text-blue-600'} transition-colors mr-2`} />
           <div className="flex flex-col">
             <span className={`text-xl lg:text-2xl logo-name-bold ${scrolled ? 'text-blue-900' : 'text-blue-900'} transition-colors`}>
               BLUEWAVE
