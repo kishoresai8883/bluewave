@@ -146,10 +146,10 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
               className="max-w-7xl mx-auto text-center text-white"
             >
-              <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
                 {currentSlide.title}
               </h1>
-              <p className="text-center text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-center text-lg md:text-xl text-slate-300 mb-8 max-w-4xl mx-auto">
                 {currentSlide.description}
               </p>
               <div className="flex justify-center gap-4 flex-wrap">

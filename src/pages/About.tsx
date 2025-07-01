@@ -5,6 +5,7 @@ import img1 from '../assets/bluewave-team-img1.webp';
 import img2 from '../assets/bluewave-team-img2.webp';
 import img3 from '../assets/bluewave-team-img3.webp';
 import img4 from '../assets/bluewave-team-img4.webp';
+import img5 from '../assets/bluewave-team-img5.jpg';
 
 const About = () => {
   const stats = [
@@ -75,7 +76,12 @@ const About = () => {
     {
       name: 'Sayyed Sofiya Anjum',
       title: 'GIS Operation Manager',
-      image: img4}
+      image: img4},
+    {
+      name: 'Avinash Gharde',
+      title: 'Field Manager',
+      image: img5
+    }
   ];
 
   return (
