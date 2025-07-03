@@ -5,7 +5,7 @@ const Careers = () => {
   return (
     <div className="min-h-screen bg-slate-50 py-36 px-4 sm:px-6 lg:px-8">
     <FormfacadeEmbed
-      formFacadeURL="https://formfacade.com/include/100831857621277081987/form/1FAIpQLSe0svQb8Gaw2OfUUF9y6H94zwcFiIN6RAhfRaWzW0W1E0foPg/classic.js/?div=ff-compose"
+      formFacadeURL="https://formfacade.com/include/110655963396733502444/form/1FAIpQLSf8wN9XhmVB_iD47Ae105Qq4I6G2bBeniEdFPA9UiEa0VAUYA/classic.js/?div=ff-compose"
       onSubmitForm={() => console.log('Form submitted')}
     />
     </div>
