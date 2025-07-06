@@ -5,6 +5,7 @@ import ServicesSection from '../components/home/Services';
 import AboutSection from '../components/home/About';
 import CTA from '../components/home/CTA';
 import GalleryCom from '../components/home/GalleryComponent';
+import Clients from '../components/home/client';
 const Home = () => {
   return (
     <motion.div
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero />
       <ServicesSection />
       <AboutSection />
+      <Clients/>
       <GalleryCom />
       <CTA />
     </motion.div>

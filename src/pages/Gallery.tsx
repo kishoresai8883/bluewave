@@ -132,7 +132,7 @@ const Gallery = () => {
       transition={{ duration: 0.4 }}
     >
       {/* Hero Section */}
-      <section className="relative bg-slate-700 text-white lg:px-20 pt-32 pb-20 h-[476px]">
+      <section className="relative bg-white text-white lg:px-20 pt-32 pb-20 h-[476px]">
         <div className="absolute inset-0 opacity-80">
           <img 
             src={gallery}

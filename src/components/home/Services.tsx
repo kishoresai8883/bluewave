@@ -82,7 +82,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id='service' className="py-20 bg-slate-50">
+    <section id='service' className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Specialized Services</h2>
@@ -101,7 +101,7 @@ const ServicesSection = () => {
           {services.map((service) => (
             <motion.div 
               key={service.id}
-              className="bg-gradient-to-r from-[#f4f5f5] to-[#f1f7ed] rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow group"
               variants={itemVariants} 
               whileHover={{ scale: 1.03, y: -5, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
             >
